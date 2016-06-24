@@ -15,4 +15,12 @@ create, and rate goals.  The user is able to register, login, and logout of an a
 
 ### **Install progress Locally**
 
+1. Git clone this directory
+2. Bundle install
+3. rake db:create
+4. rake db:migrate
+5. rake db:seed
 
+## **Using progress**
+
+Coming soon!
