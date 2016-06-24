@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.0.0-p647
+
+bundler_args: --jobs=1
+script:
+ - bundle exec rake db:create
+ - bundle exec rake db:migrate
+ - bundle exec rake db:seed
+ - bundle exec rake db:test:prepare
+ - bundle exec rake spec
+cache: bundler
+services:
+ - postgresql
+env:
+  global:
+    - secure: "4b975848feec175c1d2213156cd2ba3f6b0e102bee8cbfa68ef7a542d02edefc0dd4f579702d54809410c5131ce178b673190da0c524c9f1e60c9407cb34810d"
+    - secure: "ce6c769cdbe3748f847aaf9d197e1e9a555ec5db98b595c1b1bea84eb3c31c1be417bd04fb9211b8a786117850a1af421d497c8800d1fcc101877936d9c44f4f"
