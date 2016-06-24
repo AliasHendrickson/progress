@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :users
   resources :goals do
-    resources :resources, only: [:create, :index]
+    resources :ratings, only: [:new, :create, :update, :edit]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
