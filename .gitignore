@@ -11,4 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+#Ignore coverage files
+coverage
+=======
 Gemfile.lock
