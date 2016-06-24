@@ -48,6 +48,7 @@ class GoalsController < ApplicationController
 
   def goal_params
     params.require(:goal).permit(:description, :duration, :completed, :due_date)
+  end
 
   def find_goal
     Goal.find(params[:id])
