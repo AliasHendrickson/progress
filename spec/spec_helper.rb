@@ -12,7 +12,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   # Fail early.  Fail often.
-  config.fail_fast = true
+  config.fail_fast = false
 
   config.infer_spec_type_from_file_location!
 
@@ -41,7 +41,7 @@ RSpec.configure do |config|
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   #     --seed 1234
-  config.order = "random"
+  # config.order = "random"
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
