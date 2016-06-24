@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :ratings
-  resources :goals
+  resources :goals do
+    resources :resources, only: [:create, :index]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

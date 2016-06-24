@@ -1,4 +1,4 @@
 class Rating < ActiveRecord::Base
-  belongs_to: :goal
+  belongs_to :goal
 end
 
