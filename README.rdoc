@@ -1,13 +1,21 @@
 == README
+To try it out:
 
-Clone to your local machine
+1. Clone to your local machine
 
-bundle install
+2. bundle install
 
-bundle execute rake db:create
+3. bundle execute rake db:create
 
-bundle execute rake db:migrate
+4. bundle execute rake db:migrate
+
+5. bundle execute rake db:seed
+
+6. rails s
+
+***TESTS***
+
+After step 3 above, run: bundle exec rake db:test:prepare
 
 
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
