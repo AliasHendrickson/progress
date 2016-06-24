@@ -1,7 +1,2 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Goal.create!(description: "Be able to add a simple, concise React Component to my app without copy/pasting", due_date: Date.new, duration: "weekly")
+Rating.create!(goal_id: 1, score: 3)

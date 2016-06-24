@@ -1,18 +1,9 @@
 require 'spec_helper'
 require 'database_cleaner'
 
-DatabaseCleaner.strategy = :transaction
-
 RSpec.describe Goal, :type => :model do
-  before :each do
-    DatabaseCleaner.start
-  end
 
-  after :each do
-    DatabaseCleaner.clean
-  end
-
-  goal = Goal.create!(description: "Learn React", duration: "daily", due_date: Date.new)
+  goal = Goal.create!(description: "Be able to add a simple, concise React Component to my app without copy/pasting", due_date: Date.new, duration: "weekly")
   rating = Rating.create!(goal_id: goal.id, score: 3)
 
 
