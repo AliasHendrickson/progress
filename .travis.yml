@@ -7,7 +7,7 @@ script:
  - bundle exec rake db:create
  - bundle exec rake db:migrate
  - bundle exec rake db:seed
- - bundle exec db:test:prepare
+ - bundle exec rake db:test:prepare
  - bundle exec rake spec
 cache: bundler
 services:
