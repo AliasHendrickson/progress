@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(session[:user_id])
+    @user.experience = 1
+    @experience = @user.experience
   end
 
   # GET /users/new
