@@ -142,6 +142,8 @@ GEM
     rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    react-bootstrap-rails (0.29.4)
+      rails (>= 3.1)
     react-rails (1.7.2)
       babel-transpiler (>= 0.7.0)
       coffee-script-source (~> 1.8)
@@ -225,6 +227,7 @@ DEPENDENCIES
   jquery-rails
   pg (~> 0.15)
   rails (= 4.2.6)
+  react-bootstrap-rails
   react-rails (~> 1.0)
   rspec
   rspec-rails
