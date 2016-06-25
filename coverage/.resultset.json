@@ -1119,6 +1119,9 @@
       "/home/theroncross/Desktop/phase3/progress/app/models/goal.rb": [
         1,
         1,
+        1,
+        1,
+        1,
         null,
         1,
         1,
@@ -1126,6 +1129,7 @@
         null
       ],
       "/home/theroncross/Desktop/phase3/progress/app/models/rating.rb": [
+        1,
         1,
         1,
         null,
@@ -1146,6 +1150,9 @@
         1,
         1,
         null,
+        1,
+        null,
+        1,
         1,
         null
       ],
@@ -1316,6 +1323,6 @@
         1
       ]
     },
-    "timestamp": 1466797278
+    "timestamp": 1466882993
   }
 }

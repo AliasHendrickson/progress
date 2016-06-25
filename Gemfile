@@ -1,3 +1,8 @@
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
+
 source 'https://rubygems.org'
 
 
@@ -10,6 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'react-rails', '~> 1.0'
 gem 'react-bootstrap-rails'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
