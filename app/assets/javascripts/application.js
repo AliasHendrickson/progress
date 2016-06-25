@@ -14,9 +14,6 @@
 //= require jquery_ujs
 //= require react
 //= require react_ujs
-//= require react_bootstrap
 //= require tether
-//= require bootstrap-sprockets
 //= require components
 //= require_tree .
-//= require react_bootstrap
