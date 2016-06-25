@@ -1,7 +1,10 @@
+{ div, h2 } = React.DOM
+
 @Experience = React.createClass
+  getInitialState: ->
+    experience: @props.data
+  getDefaultProps: ->
+    experience: ""
   render: ->
-    React.DOM.div
-      className: 'experience'
-      React.DOM.h2
-        className: 'title'
-        'Experience'
+    div {className: 'experience'}
+    h2 {className: 'title'}, 'Experience'
