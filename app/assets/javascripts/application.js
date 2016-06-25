@@ -19,3 +19,4 @@
 //= require bootstrap-sprockets
 //= require components
 //= require_tree .
+//= require react_bootstrap
