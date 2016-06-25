@@ -3,12 +3,11 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Progress
-    %link{:rel => :stylesheed, :href => "https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %div{:id => 'nav'}
-      =react_component 'nav_bar'
-    = yield
+    #container-fluid
+      #nav
+      = yield
   }
