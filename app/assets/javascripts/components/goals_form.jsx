@@ -1,3 +1,5 @@
+{/*
+
 const  FormGroup = ReactBootstrap.FormGroup,
        ControlLabel = ReactBootstrap.ControlLabel,
        FormControl = ReactBootstrap.FormControl,
@@ -38,3 +40,5 @@ const formInstance = (
 $(document).ready(function() {
   ReactDOM.render(formInstance, document.getElementById('form'))
 })
+
+*/}

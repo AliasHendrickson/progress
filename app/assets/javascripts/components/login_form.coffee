@@ -1,11 +1,10 @@
-@RecordForm = React.createClass
+@LoginForm = React.createClass
   getInitialState: ->
-    title: ''
-    date: ''
-    amount: ''
+    email: ''
+    password: ''
 
   valid: ->
-    @state.title && @state.date && @state.amount
+    @state.username && @state.password
 
   handleChange: (e) ->
     name = e.target.name
@@ -13,7 +12,7 @@
 
   handleSubmit: (e) ->
     e.preventDefault()
-    $.post '', { record: @state }, (data) =>
+    $.post '', { user: @state }, (data) =>
       @props.handleNewRecord data
       @setState @getInitialState()
     , 'JSON'
@@ -25,32 +24,23 @@
       React.DOM.div
         className: 'form-group'
         React.DOM.input
-          type: 'text'
+          type: 'email'
           className: 'form-control'
-          placeholder: 'Date'
-          name: 'date'
-          value: @state.date
+          placeholder: 'email'
+          name: 'email'
+          value: @state.email
           onChange: @handleChange
       React.DOM.div
         className: 'form-group'
         React.DOM.input
-          type: 'text'
+          type: 'password'
           className: 'form-control'
-          placeholder: 'Title'
-          name: 'title'
-          value: @state.title
-          onChange: @handleChange
-      React.DOM.div
-        className: 'form-group'
-        React.DOM.input
-          type: 'number'
-          className: 'form-control'
-          placeholder: 'Amount'
-          name: 'amount'
-          value: @state.amount
+          placeholder: 'password'
+          name: 'password'
+          value: @state.password
           onChange: @handleChange
       React.DOM.button
         type: 'submit'
         className: 'btn btn-primary'
         disabled: !@valid()
-        'Create record'
+        'Login'
