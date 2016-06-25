@@ -1,4 +1,4 @@
-class Rating < ActiveRecord::Base
+class Tagging < ActiveRecord::Base
   belongs_to :tag
   belongs_to :goal
 end

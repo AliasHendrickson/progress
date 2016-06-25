@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160624194824) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_url"
-    t.boolean  "completed"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

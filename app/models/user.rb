@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   has_many :goals
-  has_many :ratings
+  has_many :ratings, through: :goals, source: :rater
 end
