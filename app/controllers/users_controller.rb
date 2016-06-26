@@ -22,6 +22,10 @@ class UsersController < ApplicationController
   end
 
   def progress
+    @user = User.find(session[:user_id])
+    @user.experience = 1
+    @experience = @user.experience
+    @avatar_url = @user.avatar_url
   end
 
   # GET /users/1/edit
