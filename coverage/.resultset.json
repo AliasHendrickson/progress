@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/theroncross/Desktop/phase3/progress/config/environment.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/application.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/application.rb": [
         1,
         null,
         1,
@@ -45,12 +45,12 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/boot.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/environments/test.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/environments/test.rb": [
         1,
         null,
         null,
@@ -94,7 +94,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/assets.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -107,7 +107,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/backtrace_silencers.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -116,18 +116,18 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/cookies_serializer.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/filter_parameter_logging.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/inflections.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -145,18 +145,18 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/mime_types.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/session_store.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/sorcery.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/sorcery.rb": [
         null,
         null,
         null,
@@ -621,7 +621,7 @@
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/initializers/wrap_parameters.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -637,7 +637,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/config/routes.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/config/routes.rb": [
         1,
         1,
         null,
@@ -678,54 +678,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/app/helpers/goals_helper.rb": [
-        1,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/app/helpers/ratings_helper.rb": [
-        1,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/app/helpers/user_sessions_helper.rb": [
-        1,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/spec/controllers/user_sessions_controller_spec.rb": [
         null,
         null,
         null,
@@ -753,7 +705,55 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/controllers/users_controller_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/app/helpers/goals_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/app/helpers/ratings_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/app/helpers/user_sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/controllers/user_sessions_controller_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         null,
@@ -914,7 +914,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/rails_helper.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/rails_helper.rb": [
         null,
         1,
         null,
@@ -974,7 +974,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/app/controllers/users_controller.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -988,6 +988,9 @@
         null,
         null,
         1,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -1051,7 +1054,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/app/controllers/application_controller.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -1065,7 +1068,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/helpers/user_sessions_helper_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/helpers/user_sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -1082,7 +1085,7 @@
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/helpers/users_helper_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -1099,7 +1102,7 @@
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/models/goal_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/models/goal_spec.rb": [
         1,
         1,
         null,
@@ -1116,7 +1119,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/app/models/goal.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/models/goal.rb": [
         1,
         1,
         1,
@@ -1128,21 +1131,21 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/app/models/rating.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/models/rating.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/models/user_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/app/models/user.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/app/models/user.rb": [
         1,
         1,
         null,
@@ -1156,106 +1159,81 @@
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/requests/users_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/requests/users_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/home/theroncross/Desktop/phase3/progress/spec/routing/users_routing_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
+        0,
         null,
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/user_sessions/create.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/routing/users_routing_spec.rb": [
         1,
         null,
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/user_sessions/destroy.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/user_sessions/create.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/user_sessions/new.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/user_sessions/destroy.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/users/edit.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/user_sessions/new.html.erb_spec.rb": [
+        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        1,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/users/index.html.erb_spec.rb": [
-        null,
-        null,
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/users/edit.html.erb_spec.rb": [
         null,
         null,
         null,
@@ -1278,7 +1256,32 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/users/new.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/users/index.html.erb_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/users/new.html.erb_spec.rb": [
         null,
         null,
         null,
@@ -1300,7 +1303,7 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/spec/views/users/show.html.erb_spec.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/spec/views/users/show.html.erb_spec.rb": [
         null,
         null,
         null,
@@ -1318,11 +1321,11 @@
         null,
         null
       ],
-      "/home/theroncross/Desktop/phase3/progress/db/seeds.rb": [
+      "/Users/apprentice/Desktop/alec-progress/progress/db/seeds.rb": [
         1,
         1
       ]
     },
-    "timestamp": 1466882993
+    "timestamp": 1466955464
   }
 }
