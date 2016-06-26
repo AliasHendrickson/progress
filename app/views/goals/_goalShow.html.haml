@@ -2,4 +2,4 @@
   %h1{class: "goal_title goalShow"}= @goal.description
 
   %p{class: 'duration goalShow'}= "Your goal is a #{@goal.duration} long goal"
-  %p{class: 'due_date goalShow'}= "Your goal is due in #{distance_of_time_in_words(Time.now, @goal.due_date)}."
+  %p{class: 'due_date goalShow'}= "Your goal is due at #{ @goal.due_date.strftime("%r, %B %d, %Y")}."
