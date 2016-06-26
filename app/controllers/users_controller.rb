@@ -33,6 +33,7 @@ class UsersController < ApplicationController
       end
     end
     @recently_completed_goals
+
   end
 
   # GET /users/1/edit
