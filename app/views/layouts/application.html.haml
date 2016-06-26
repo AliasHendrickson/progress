@@ -8,5 +8,6 @@
     = csrf_meta_tags
   %body
     #container-fluid
-      = render 'layouts/nav_bar'
+      - unless current_page?('/login') || current_page?('/users/new') || current_page?('/')
+        = render 'layouts/nav_bar'
       = yield
