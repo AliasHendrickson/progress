@@ -1,4 +1,5 @@
-%h1{class: "goal_title"}= @goal.description
+.goal
+  %h1{class: "goal_title goalShow"}= @goal.description
 
-%p{class: 'duration'}= @goal.duration
-%p{class: 'due_date'}= @goal.due_date
+  %p{class: 'duration goalShow'}= "Your goal is a #{@goal.duration} long goal"
+  %p{class: 'due_date goalShow'}= "Your goal is due in #{distance_of_time_in_words(Time.now, @goal.due_date)}."
