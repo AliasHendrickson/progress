@@ -3,10 +3,11 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title Progress
+    %link{rel: :stylesheet, type: :"text/css", href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    #container-fluid
+    - if current_user
       = render 'layouts/nav_bar'
-      = yield
+    = yield
