@@ -10,3 +10,4 @@ class CreateGoals < ActiveRecord::Migration
     end
   end
 end
+
