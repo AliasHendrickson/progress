@@ -3,14 +3,10 @@ Rails.application.routes.draw do
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout'=> 'user_sessions#destroy', :as => :logout
-  get 'progress/show' => ''
+  get 'progress' => 'users#progress', :as => :progress
 
   resources :user_sessions
-  resources :users do
-    member do
-      get 'progress'
-    end
-  end
+  resources :users
   resources :goals do
     resources :ratings, only: [:new, :create, :update, :edit]
   end
