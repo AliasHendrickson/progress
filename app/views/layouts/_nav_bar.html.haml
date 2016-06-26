@@ -1,7 +1,8 @@
 #nav_bar
-  = link_to "Progress", :controller => "users", :action => "progress"
+  / = link_to "Progress", :controller => "users", :action => "progress"
   = link_to "New Goal", :controller => "goals", :action => "new"
   = link_to "Past Goals", :controller => "goals", :action => "index"
+
   - if current_user
     = link_to "Profile", :controller => "users", :action => "show", :id => current_user.id
     = link_to 'Logout', :controller => "user_sessions", :action => "destroy"

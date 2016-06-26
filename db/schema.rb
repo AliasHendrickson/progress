@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20160625152721) do
   create_table "goals", force: :cascade do |t|
     t.string   "description"
     t.string   "duration"
-    t.boolean  "completed"
+    t.boolean  "completed",   default: false
     t.datetime "due_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "ratings", force: :cascade do |t|
