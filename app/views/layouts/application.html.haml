@@ -6,7 +6,13 @@
     %link{rel: :stylesheet, type: :"text/css", href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
+    = stylesheet_link_tag
     = csrf_meta_tags
+    / Compiled and minified CSS Materialize
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css", :rel => "stylesheet"}
+    / Compiled and minified JavaScript Materialize
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"}
+
   %body
     - if current_user
       = render 'layouts/nav_bar'

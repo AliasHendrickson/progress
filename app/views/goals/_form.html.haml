@@ -8,10 +8,13 @@
   = f.label "Write a goal here:"
   = f.text_field :description
 
+  %div{class: "input-field col s12"}
   = f.label "Pick if this goal is a day, week, or phase goal:"
-  = f.select "duration", [['Day', 'Day'], ['Week', 'Week'], ['Phase', 'Phase']]
+  = f.select(:duration, [['Day', 'Day'], ['Week', 'Week'], ['Phase', 'Phase']], {}, {:class => 'browser-default'})
 
+  %div{class: "input-field col s12"}
   = f.label "Enter in a due date:"
-  = f.date_field :due_date
+  = f.date_field :due_date, class: "datepicker"
+  = f.time_field :due_date, class: "timepicker"
 
   = f.submit "Dream Forward"
