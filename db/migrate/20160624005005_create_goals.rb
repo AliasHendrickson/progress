@@ -3,7 +3,7 @@ class CreateGoals < ActiveRecord::Migration
     create_table :goals do |t|
       t.string :description
       t.string :duration
-      t.boolean :completed
+      t.boolean :completed, :default => false
       t.datetime :due_date
 
       t.timestamps null: false

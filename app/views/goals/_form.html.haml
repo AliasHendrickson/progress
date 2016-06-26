@@ -5,13 +5,13 @@
         - @goal.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.label :description
+  = f.label "Write a goal here:"
   = f.text_field :description
 
-  = f.label :duration
-  = f.select "duration", [['Day', :day], ['2', 2], ['3', 3]]
+  = f.label "Pick if this goal is a day, week, or phase goal:"
+  = f.select "duration", [['Day', 'Day'], ['Week', 'Week'], ['Phase', 'Phase']]
 
-  = f.label :due_date
-  = f.datetime_field :due_date
+  = f.label "Enter in a due date:"
+  = f.date_field :due_date
 
-  = f.submit
+  = f.submit "Dream Forward"

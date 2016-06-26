@@ -16,10 +16,10 @@ class GoalsController < ApplicationController
   end
 
   def create
-    @goal = Goal.new
+    @goal = Goal.new(goal_params)
 
     if @goal.save
-      redirect_to #somewhere react? probably the main page
+      redirect_to @goal
     else
       #This might be different with react
       render "new"
@@ -47,7 +47,7 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-    params.require(:goal).permit(:description, :duration, :completed, :due_date)
+    params.require(:goal).permit(:description, :duration, :due_date)
   end
 
   def find_goal
