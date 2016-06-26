@@ -1,6 +1,6 @@
 var Completions = React.createClass({
   render: function() {
-  return (
+    return (
       <div className="collection with-header">
         <ul className="collection-header"><h4>Recently Completed: </h4>
          { this.props.data.map(function(goalObject) {
@@ -9,7 +9,7 @@ var Completions = React.createClass({
           }
         </ul>
       </div>
-   );
+    );
   }
 });
 
