@@ -16,6 +16,9 @@ class UsersController < ApplicationController
     @experience = @user.experience
   end
 
+  def progress
+  end
+
   # GET /users/new
   def new
     @user = User.new
