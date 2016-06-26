@@ -22,6 +22,17 @@ class UsersController < ApplicationController
   end
 
   def progress
+    @user = User.find(session[:user_id])
+    @user.experience = 1
+    @experience = @user.experience
+    @avatar_url = "http://www.bugx-exterminators.com/images/gopher.jpg"
+    @recently_completed_goals = []
+    @user.goals.map do |goal|
+      if goal.completed == true
+        @recently_completed_goals << goal
+      end
+    end
+    @recently_completed_goals
   end
 
   # GET /users/1/edit
