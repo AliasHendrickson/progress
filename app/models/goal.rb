@@ -4,6 +4,10 @@ class Goal < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
 
+  validates :description, presence: true
+  validates :duration, presence: true
+  validates :due_date, presence: true
+
   def current_score
     return self.ratings.last.score
   end
