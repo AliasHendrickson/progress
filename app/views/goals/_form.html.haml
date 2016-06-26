@@ -12,6 +12,6 @@
   = f.select "duration", [['Day', 'Day'], ['Week', 'Week'], ['Phase', 'Phase']]
 
   = f.label "Enter in a due date:"
-  = f.date_field :due_date
+  = f.datetime_select :due_date, :ampm => true
 
   = f.submit "Dream Forward"
