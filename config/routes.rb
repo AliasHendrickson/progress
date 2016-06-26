@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   post 'logout'=> 'user_sessions#destroy', :as => :logout
 
   resources :user_sessions
-  resources :users
+  resources :users do
+    member do
+      get 'progress'
+    end
+  end
   resources :goals do
     resources :ratings, only: [:new, :create, :update, :edit]
   end
