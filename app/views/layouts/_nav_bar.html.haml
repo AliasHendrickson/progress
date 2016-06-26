@@ -1,7 +1,6 @@
 #nav_bar
-  = link_to "Progress", progress_path
-  = link_to "New Goal", new_goal_path
-  = link_to "Past Goals", goals_path
-  - if current_user
-    = link_to "Profile", user_path(:id => current_user.id)
-    = link_to "Logout", logout_path, method: :post
+  .row
+    = link_to "Progress", progress_path, class: "col s3 btn"
+    = link_to "New Goal", new_goal_path, class: "col s3 btn"
+    = link_to "Past Goals", goals_path, class: "col s3 btn"
+    = link_to "Profile", user_path(:id => current_user.id), class: "col s3 btn"

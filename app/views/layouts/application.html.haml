@@ -3,6 +3,7 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title Progress
+    %link{rel: :stylesheet, type: :"text/css", href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"}
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = stylesheet_link_tag
@@ -13,6 +14,6 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"}
 
   %body
-    #container-fluid
+    - if current_user
       = render 'layouts/nav_bar'
-      = yield
+    = yield
