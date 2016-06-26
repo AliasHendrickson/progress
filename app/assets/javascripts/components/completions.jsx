@@ -1,16 +1,14 @@
 var Completions = React.createClass({
   render: function() {
   return (
-    <div className="goals-container">
       <div className="collection with-header">
-        <ul className="collection-header"><h3>Recently Completed</h3>
+        <ul className="collection-header"><h4>Recently Completed: </h4>
          { this.props.data.map(function(goalObject) {
-             return <li className="collection-item">{goalObject.description}</li>;
+             return <a href="#!" className="collection-item">{goalObject.description}</a>;
             })
           }
         </ul>
       </div>
-    </div>
    );
   }
 });
