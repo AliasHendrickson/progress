@@ -9,15 +9,17 @@
 = react_component 'Experience', { data: @experience }
 .collection.with-header
   %h5.collection-header Daily Goals:
-  %a.collection-item{href: "/goals/#{@first_daily.id}"} "#{@first_daily.description}"
-  %a.collection-item{href: "/goals/#{@second_daily.id}"} "#{@second_daily.description}"
+  - @daily_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
-  %a.collection-item{href: "/goals/#{@weekly_goal.id}"} "#{@weekly_goal.description}"
+  - @weekly_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
 
 .collection.with-header
   %h5.collection-header Phase Goals:
-  %a.collection-item{href: "/goals/#{@phase_goal.id}"} "#{@phase_goal.description}"
+  - @phase_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
 
 

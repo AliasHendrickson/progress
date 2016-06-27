@@ -27,12 +27,8 @@ class UsersController < ApplicationController
     @experience = @user.experience
     @avatar_url = "http://www.bugx-exterminators.com/images/gopher.jpg"
     @daily_goals = @user.goals.where(duration: "daily")
-    @first_daily = @daily_goals.first
-    @second_daily = @daily_goals.last
     @weekly_goals = @user.goals.where(duration: "weekly")
-    @weekly_goal = @weekly_goals.first
     @phase_goals = @user.goals.where(duration: "phase")
-    @phase_goal = @phase_goals.first
   end
 
   # GET /users/1/edit
