@@ -31,7 +31,7 @@ class GoalsController < ApplicationController
     @goal = find_goal
 
     if @goal.update(goal_params)
-      redirect_to #somewhere react? probably the main page
+      redirect_to
     else
       #this may be different with react
       render "edit"
@@ -42,6 +42,12 @@ class GoalsController < ApplicationController
     @goal = find_goal
     @goal.destroy
     redirect_to #main page?
+  end
+
+  def completed
+    @goal = find_goal
+    @goal.update_attributes(completed: true)
+    redirect_to @goal
   end
 
 
