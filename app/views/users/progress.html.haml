@@ -9,4 +9,6 @@
 = link_to 'Back', users_path
 
 = react_component 'Experience', { data: @experience }
-= react_component 'DailyGoal', { data: @daily_goals }
+= react_component 'DailyGoalsCollection', { data: @daily_goals }
+= react_component 'DailyGoal', { data: @first_daily }
+= react_component 'DailyGoal', { data: @second_daily }

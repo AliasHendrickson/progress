@@ -1,10 +1,7 @@
 var DailyGoal = React.createClass({
   render: function() {
-    console.log(this.props.data.description)
     return (
-      <div className="daily-goal">
-
-      </div>
+      <a href="#!" className="collection-item">{this.props.data.description}</a>
     );
   }
 });

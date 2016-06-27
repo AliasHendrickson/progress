@@ -27,7 +27,13 @@ class UsersController < ApplicationController
     @experience = @user.experience
     @avatar_url = "http://www.bugx-exterminators.com/images/gopher.jpg"
     @daily_goals = @user.goals.where(duration: "daily")
+    @first_daily = @daily_goals.first
+    @second_daily = @daily_goals.last
+    p "============"
     p @daily_goals
+    p "----------------"
+    p @first_daily
+    p @second_daily
   end
 
   # GET /users/1/edit
