@@ -1,12 +1,25 @@
-
 %p#notice= notice
 %p
-  %strong Email:
-  = @user.email
-= react_component 'Avatar', { data: @avatar_url }
+  %strong= @user.username
+%img{src: "#{@avatar_url}"}
 = link_to 'Edit', edit_user_path(@user)
 |
 = link_to 'Back', users_path
-
 = react_component 'Experience', { data: @experience }
-= react_component 'DailyGoal', { data: @daily_goals }
+
+.collection.with-header
+  %h5.collection-header Daily Goals:
+  - @daily_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+
+.collection.with-header
+  %h5.collection-header Weekly Goals:
+  - @weekly_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+
+.collection.with-header
+  %h5.collection-header Phase Goals:
+  - @phase_goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+
+
