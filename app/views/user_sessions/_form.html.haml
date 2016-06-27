@@ -1,9 +1,9 @@
 = form_tag user_sessions_path, :method => :post do
-  .field
+  .input-field
     = label_tag :email
     = text_field_tag :email
-  .field
+  .input-field
     = label_tag :password
     = password_field_tag :password
-  .actions
+  %div{class: 'actions btn'}
     = submit_tag "Login"
