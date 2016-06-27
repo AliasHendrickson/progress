@@ -29,11 +29,8 @@ class UsersController < ApplicationController
     @daily_goals = @user.goals.where(duration: "daily")
     @first_daily = @daily_goals.first
     @second_daily = @daily_goals.last
-    p "============"
-    p @daily_goals
-    p "----------------"
-    p @first_daily
-    p @second_daily
+    @weekly_goals = @user.goals.where(duration: "weekly")
+    @weekly_goal = @weekly_goals.first
   end
 
   # GET /users/1/edit

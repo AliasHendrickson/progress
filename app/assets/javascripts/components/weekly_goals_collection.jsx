@@ -1,11 +1,11 @@
-var DailyGoalsCollection = React.createClass({
+var WeeklyGoalsCollection = React.createClass({
   getInitialState: function() {
-    return {daily_goals: this.props.data };
+    return {weekly_goals: this.props.data };
   },
   render: function() {
     return (
       <div className="collection">
-        DailyGoals:
+        WeeklyGoals:
       </div>
     );
   }

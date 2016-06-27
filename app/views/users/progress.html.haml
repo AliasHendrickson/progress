@@ -1,8 +1,7 @@
 
 %p#notice= notice
 %p
-  %strong Email:
-  = @user.email
+  %strong= @user.username
 = react_component 'Avatar', { data: @avatar_url }
 = link_to 'Edit', edit_user_path(@user)
 |
@@ -12,3 +11,5 @@
 = react_component 'DailyGoalsCollection', { data: @daily_goals }
 = react_component 'DailyGoal', { data: @first_daily }
 = react_component 'DailyGoal', { data: @second_daily }
+= react_component 'WeeklyGoalsCollection', { data: @weekly_goals }
+= react_component 'WeeklyGoal', { data: @weekly_goal}
