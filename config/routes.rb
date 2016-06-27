@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout'=> 'user_sessions#destroy', :as => :logout
   get 'progress' => 'users#progress', :as => :progress
+  post 'completed/:id' => 'goals#completed', :as => :completed
 
   resources :user_sessions
   resources :users

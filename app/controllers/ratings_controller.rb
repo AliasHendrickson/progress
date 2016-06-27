@@ -4,10 +4,10 @@ class RatingsController < ApplicationController
   end
 
   def create
-    @rating = Rating.new
-
+    @goal = Goal.find(params[:goal_id])
+    @rating = @goal.ratings.new(rating_params)
     if @rating.save
-      redirect_to #somewhere react? probably the main page
+      redirect_to @goal
     else
       #This might be different with react
       render "new"
@@ -18,16 +18,6 @@ class RatingsController < ApplicationController
     @rating = find_rating
   end
 
-  def update
-    @goal = find_goal
-
-    if @goal.update(goal_params)
-      redirect_to #somewhere react? probably the main page
-    else
-      #this may be different with react
-      render "edit"
-    end
-  end
 
   private
 
