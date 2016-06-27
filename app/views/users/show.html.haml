@@ -1,11 +1,13 @@
 %p#notice= notice
-.user-profile-container
-  %img{src: @user.avatar_url}
-  %br
-  %strong Username:
-  = @user.username
-  %strong Email:
-  = @user.email
+.profile-container
+  .profile-avatar
+    %img{src: @user.avatar_url}
+  .profile-username
+    %strong Username:
+    = @user.username
+  .profile-email
+    %strong Email:
+    = @user.email
 = link_to 'Edit', edit_user_path(@user)
 |
 = link_to 'Back', users_path
