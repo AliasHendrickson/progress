@@ -1,12 +1,12 @@
 %p#notice= notice
-%p
-  %strong= @user.username
-%img{src: "#{@avatar_url}"}
-= link_to 'Edit', edit_user_path(@user)
-|
-= link_to 'Back', users_path
-= react_component 'Experience', { data: @experience }
-
+.progress-container
+  %img{class: "col s3", src: "#{@avatar_url}"}
+  .progress-stats-container
+    %span
+      %strong= @user.username
+    %span Level: #{@user.current_level}
+    .progress-bar-container
+      .progress-bar{style: "width: #{@user.level_progress}%"}
 .collection.with-header
   %h5.collection-header Daily Goals:
   - @daily_goals.each do |goal|
@@ -21,5 +21,3 @@
   %h5.collection-header Phase Goals:
   - @phase_goals.each do |goal|
     %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
-
-

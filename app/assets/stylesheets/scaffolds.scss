@@ -1,3 +1,23 @@
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+form label {
+  font-size: 1.3em;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.progress-stats-container {
+  width: 60%;
+  display: inline-block;
+}
+
 .nav-wrapper {
   background-color: #FA6900;
   font-size: 0.9em;
@@ -7,6 +27,12 @@
   padding: 0.3em;
 }
 
-form label {
-  font-size: 1.3em;
+.progress-bar-container {
+  height: 30px;
+  border: 1px solid #F38630;
+}
+
+.progress-bar {
+  background-color: #F38630;
+  height: 28px;
 }
