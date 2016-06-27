@@ -4,10 +4,11 @@ class RatingsController < ApplicationController
   end
 
   def create
-    @rating = Rating.new
-
+    @rating = Rating.new(rating_params)
+    puts "Create"
     if @rating.save
-      redirect_to #somewhere react? probably the main page
+      puts "Saved"
+      redirect_to "/progress"
     else
       #This might be different with react
       render "new"
@@ -22,7 +23,7 @@ class RatingsController < ApplicationController
     @goal = find_goal
 
     if @goal.update(goal_params)
-      redirect_to #somewhere react? probably the main page
+      redirect_to progress
     else
       #this may be different with react
       render "edit"
