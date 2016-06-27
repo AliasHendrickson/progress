@@ -1,5 +1,9 @@
 %p#notice= notice
-%p
+.user-profile-container
+  %img{src: @user.avatar_url}
+  %br
+  %strong Username:
+  = @user.username
   %strong Email:
   = @user.email
 = link_to 'Edit', edit_user_path(@user)

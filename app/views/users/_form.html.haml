@@ -7,17 +7,21 @@
       %ul
         - @user.errors.full_messages.each do |message|
           %li= message
-  .field
+  -if current_page? edit_user_path
+    .input-field
+      = f.label :username
+      = f.text_field :username
+    .input-field
+      = f.label :avatar_url, "Enter a url to update your profile picture."
+      = f.text_field :avatar_url
+  .input-field
     = f.label :email
-    %br/
     = f.text_field :email
-  .field
+  .input-field
     = f.label :password
-    %br/
     = f.password_field :password
-  .field
+  .input-field
     = f.label :password_confirmation
-    %br/
     = f.password_field :password_confirmation
   .actions
     = f.submit
