@@ -33,6 +33,7 @@ class RatingsController < ApplicationController
 
   def rating_params
     params.require(:rating).permit(:score, :comment)
+  end
 
   def find_rating
     Rating.find(params[:id])
