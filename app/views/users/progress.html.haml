@@ -1,4 +1,3 @@
-
 %p#notice= notice
 %p
   %strong Email:
@@ -7,6 +6,7 @@
 = link_to 'Edit', edit_user_path(@user)
 |
 = link_to 'Back', users_path
-
-= react_component 'Experience', { data: @experience }
+%p Level: #{@user.current_level}
+.progress-bar-container
+  .progress-bar.center-align{style: "width: #{@user.level_progress}%"}
 = react_component 'DailyGoal', { data: @daily_goals }
