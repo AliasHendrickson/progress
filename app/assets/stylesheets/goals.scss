@@ -1,3 +1,30 @@
 // Place all the styles related to the Goals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+label.active {
+  font-size: 150%;
+}
+
+.new_goal {
+  font-size: 100%;
+}
+
+.first-letter {
+  font-size: 150%;
+}
+
+.smart {
+  display: block;
+  width: 30%;
+  margin-left: 45%;
+  text-align: left;
+}
+
+.container {
+  text-align: center;
+}
+
+.goal-form-h {
+  color: #F38630;
+}
