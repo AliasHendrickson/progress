@@ -1,17 +1,23 @@
-
 %p#notice= notice
 %p
   %strong= @user.username
-= react_component 'Avatar', { data: @avatar_url }
+%img{src: "#{@avatar_url}"}
 = link_to 'Edit', edit_user_path(@user)
 |
 = link_to 'Back', users_path
 
 = react_component 'Experience', { data: @experience }
-= react_component 'DailyGoalsCollection', { data: @daily_goals }
-= react_component 'DailyGoal', { data: @first_daily }
-= react_component 'DailyGoal', { data: @second_daily }
-= react_component 'WeeklyGoalsCollection', { data: @weekly_goals }
-= react_component 'WeeklyGoal', { data: @weekly_goal}
-= react_component 'PhaseGoalsCollection', { data: @phase_goals }
-= react_component 'PhaseGoal', { data: @phase_goal }
+.collection.with-header
+  %h5.collection-header Daily Goals:
+  %a.collection-item{href: "/goals/#{@first_daily.id}"} "#{@first_daily.description}"
+  %a.collection-item{href: "/goals/#{@second_daily.id}"} "#{@second_daily.description}"
+
+.collection.with-header
+  %h5.collection-header Weekly Goals:
+  %a.collection-item{href: "/goals/#{@weekly_goal.id}"} "#{@weekly_goal.description}"
+
+.collection.with-header
+  %h5.collection-header Phase Goals:
+  %a.collection-item{href: "/goals/#{@phase_goal.id}"} "#{@phase_goal.description}"
+
+
