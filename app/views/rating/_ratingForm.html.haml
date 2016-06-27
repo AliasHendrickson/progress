@@ -1,0 +1,11 @@
+= form_for [goal, (@rating || goal.ratings.new)] do |f|
+  -if f.object.errors.any?
+    #errors
+      %ul
+        - f.object.errors.full_messages.each do |msg|
+          %li= msg
+
+  =f.label "Rate how confident you feel about this goal so far."
+  =f.radio_button :score, [[1, 1]]
+
+  =f.submit "Rate and Comment"

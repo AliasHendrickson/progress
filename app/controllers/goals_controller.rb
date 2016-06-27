@@ -5,6 +5,7 @@ class GoalsController < ApplicationController
 
   def show
     @goal = find_goal
+    # @rating = Rating.new
   end
 
   def new
