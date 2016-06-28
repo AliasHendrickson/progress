@@ -12,14 +12,14 @@
   - @daily_goals.each do |goal|
     %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
 
-/ .collection.with-header
-/   %h5.collection-header Weekly Goals:
-/   -if @weekly_goal
-/     %a.myLink.collection-item{:href => "#openModal"}= @weekly_goal.description
-/     #openModal.modal
-/       .modal-content
-/         %span{class: "close"}="x"
-/         %p Other Text
+.collection.with-header
+  %h5.collection-header Weekly Goals:
+  -if @weekly_goal
+    %a.myLink.collection-item{:href => "#openModal"}= @weekly_goal.description
+    #openModal.modal
+      .modal-content
+        %span{class: "close"}="x"
+        %p Other Text
 
 .collection.with-header
   %h5.collection-header Phase Goals:
@@ -27,7 +27,7 @@
     / - phase_goal = @phase_goal
     / = phase_goal
     %a.myLink.collection-item{:href => "#openModal"}= @phase_goal.description
-    #openModal.modal
+    #openModal1.modal
       .modal-content
         %span{class: "close"}= "x"
         =render "goals/goalShow", :goal => @phase_goal

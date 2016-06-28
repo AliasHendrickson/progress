@@ -1,5 +1,5 @@
 $(document).ready( function() {
-  var modal = document.getElementById('openModal');
+  var modal = document.getElementById('openModal1');
 
   // Get the button that opens the modal
   var link = $(".myLink");
@@ -11,7 +11,6 @@ $(document).ready( function() {
 
   // When the user clicks on the button, open the modal
   $(".myLink").on("click", function() {
-      console.log("hi")
       modal.style.display = "block";
   });
 

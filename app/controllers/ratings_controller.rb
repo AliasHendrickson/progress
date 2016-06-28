@@ -7,7 +7,7 @@ class RatingsController < ApplicationController
     @goal = Goal.find(params[:goal_id])
     @rating = @goal.ratings.new(rating_params)
     if @rating.save
-      redirect_to @goal
+      redirect_to "/"
     else
       #This might be different with react
       render "new"
