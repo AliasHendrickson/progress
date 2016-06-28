@@ -1,23 +1,20 @@
-%p#notice= notice
-.progress-container
-  %img{class: "col s3", src: "#{@avatar_url}"}
-  .progress-stats-container
-    %span
-      %strong= @user.username
-    %span Level: #{@user.current_level}
-    .progress-bar-container
-      .progress-bar{style: "width: #{@user.progress_bar_width}%"}
-.collection.with-header
-  %h5.collection-header Daily Goals:
-  - @daily_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+.row
+  .col.s12
+    %ul.tabs
+      %li.tab.col.s3
+        %a{href: "#progress"} Progress
+      %li.tab.col.s3
+        %a{href: "#new_goal"} New Goal
+      %li.tab.col.s3
+        %a{href: "#past_goals"} Past Goals
+      %li.tab.col.s3
+        %a{href: "#profile"} Profile
+    #progress.col.s12
+      = render '/users/progress'
+    #new_goal.col.s12
+      = render '/goals/new'
+    #past_goals.col.s12
+      = render '/goals/index'
+    #profile.col.s12
+      = render '/users/show'
 
-.collection.with-header
-  %h5.collection-header Weekly Goals:
-  - @weekly_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
-
-.collection.with-header
-  %h5.collection-header Phase Goals:
-  - @phase_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
