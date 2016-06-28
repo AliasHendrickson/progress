@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'progress' => 'users#progress', :as => :progress
   post 'completed/:id' => 'goals#completed', :as => :completed
 
+  resources :groups, only: [:index, :new, :create, :update, :edit]
   resources :user_sessions
   resources :users
   resources :goals do
