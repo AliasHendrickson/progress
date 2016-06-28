@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     @daily_goals = @user.goals.where(duration: "daily")
     @weekly_goals = @user.goals.where(duration: "weekly")
     @phase_goals = @user.goals.where(duration: "phase")
+    @group = current_user.group || Group.new
   end
 
   # GET /users/1/edit
