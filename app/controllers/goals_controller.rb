@@ -5,7 +5,6 @@ class GoalsController < ApplicationController
 
   def show
     @goal = find_goal
-    # @rating = Rating.new
   end
 
   def new
@@ -21,7 +20,7 @@ class GoalsController < ApplicationController
     @goal = @user.goals.new(goal_params)
 
     if @goal.save
-      redirect_to @goal
+      redirect_to progress_path
     else
       #This might be different with react
       render "new"
@@ -32,7 +31,7 @@ class GoalsController < ApplicationController
     @goal = find_goal
 
     if @goal.update(goal_params)
-      redirect_to
+      redirect_to progress_path
     else
       #this may be different with react
       render "edit"
@@ -42,13 +41,13 @@ class GoalsController < ApplicationController
   def destroy
     @goal = find_goal
     @goal.destroy
-    redirect_to #main page?
+    redirect_to progress_path
   end
 
   def completed
     @goal = find_goal
     @goal.update_attributes(completed: true)
-    redirect_to @goal
+    redirect_to progress_path
   end
 
 
