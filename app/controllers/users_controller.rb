@@ -38,6 +38,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @user.experience = 0
+    @user.avatar_url ||= 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
 
     respond_to do |format|
       if @user.save
