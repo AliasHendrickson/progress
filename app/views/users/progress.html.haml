@@ -7,17 +7,36 @@
     %span Level: #{@user.current_level}
     .progress-bar-container
       .progress-bar{style: "width: #{@user.level_progress}%"}
+
 .collection.with-header
   %h5.collection-header Daily Goals:
   - @daily_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+    .collection-item
+      %a.myLink{:href => "#openModal"}= goal.description
+      #openModal.modal
+        .modal-content
+          %span{class: "close"}="x"
+          =render "goals/goalShow", :goal => goal
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
-  - @weekly_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+  -if @weekly_goal
+    .collection-item
+      %a.myLink{:href => "#openModal"}= @weekly_goal.description
+      #openModal.modal
+        .modal-content
+          %span{class: "close"}="x"
+          =render "goals/goalShow", :goal => @weekly_goal
 
 .collection.with-header
   %h5.collection-header Phase Goals:
-  - @phase_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+  -if @phase_goal
+    / - phase_goal = @phase_goal
+    / = phase_goal
+    .collection-item
+      %a.myLink{:href => "#openModal"}= @phase_goal.description
+      #openModal.modal
+        .modal-content
+          %span{class: "close"}= "x"
+          =render "goals/goalShow", :goal => @phase_goal
+

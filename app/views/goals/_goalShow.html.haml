@@ -1,17 +1,16 @@
 .goal
-  %h1{class: "goal_title goalShow"}= @goal.description
+  %h1{class: "goal_title goalShow"}= "#{goal.description}"
 
-  %p{class: 'duration goalShow'}= "Your goal is a #{@goal.duration} long goal"
-  %p{class: 'due_date goalShow'}= "Your goal is due at #{ @goal.due_date.strftime("%r, %B %d, %Y")}."
+  %p{class: 'duration goalShow'}= "Your goal is a #{goal.duration} long goal"
 
 %p{class: 'rating goalShow'}= "Here is your past feedback..."
 
-- @goal.ratings.each do |rating|
+- goal.ratings.each do |rating|
   %li{class: 'confidence_score'}= "Confidence score:  #{rating.score}"
 
   %li{class: 'rating_comment'}= "Comment:  #{rating.comment}"
   %br
--if @goal.completed == false
-  =button_to("Completed Goal! *High Fives*", completed_path, method: "post", class: "btn completed completed_btn")
+-if goal.completed == false
+  =button_to("Completed Goal! *High Fives*", completed_path(goal), method: "post", class: "btn completed completed_btn")
 
-=render partial: "rating/ratingForm", locals: { goal: @goal }
+=render "rating/ratingForm", :goal => goal
