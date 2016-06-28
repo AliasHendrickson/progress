@@ -17,7 +17,8 @@ class GoalsController < ApplicationController
   end
 
   def create
-    @goal = Goal.new(goal_params)
+    @user = current_user
+    @goal = @user.goals.new(goal_params)
 
     if @goal.save
       redirect_to @goal
