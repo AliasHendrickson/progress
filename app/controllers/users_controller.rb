@@ -30,7 +30,6 @@ class UsersController < ApplicationController
     @daily_goals = @user.goals.where(duration: "daily").order('created_at DESC').take(3)
     @weekly_goal = @user.goals.where(duration: "weekly").last
     @phase_goal = @user.goals.where(duration: "phase").last
-    p @daily_goals
   end
 
   # GET /users/1/edit
