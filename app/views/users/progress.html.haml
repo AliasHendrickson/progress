@@ -14,10 +14,10 @@
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
-  - @weekly_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+  -if @weekly_goal
+    %a.collection-item{:href => "/goals/#{@weekly_goal.id}"}= @weekly_goal.description
 
 .collection.with-header
   %h5.collection-header Phase Goals:
-  - @phase_goals.each do |goal|
-    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+  -if @phase_goal
+    %a.collection-item{:href => "/goals/#{@phase_goal.id}"}= @phase_goal.description

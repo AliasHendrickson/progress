@@ -22,13 +22,15 @@ class UsersController < ApplicationController
   end
 
   def progress
+    @counter = 0
     @user = User.find(session[:user_id])
     @user.experience = 1
     @experience = @user.experience
     @avatar_url = "http://www.bugx-exterminators.com/images/gopher.jpg"
-    @daily_goals = @user.goals.where(duration: "daily")
-    @weekly_goals = @user.goals.where(duration: "weekly")
-    @phase_goals = @user.goals.where(duration: "phase")
+    @daily_goals = @user.goals.where(duration: "daily").order('created_at DESC').take(3)
+    @weekly_goal = @user.goals.where(duration: "weekly").last
+    @phase_goal = @user.goals.where(duration: "phase").last
+    p @daily_goals
   end
 
   # GET /users/1/edit
