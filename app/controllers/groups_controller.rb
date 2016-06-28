@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  def index
+  def show
   end
 
   def new
