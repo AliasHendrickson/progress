@@ -1,4 +1,8 @@
-- @goals.each do |goal|
-  %h3= goal.description
-  %p
-    Current score: #{goal.current_score} / 5
+.collection.with-header
+  %h4.collection-header Progress Report
+  - @goals.each do |goal|
+    %a.collection-item{:href => "/goals/#{goal.id}"}= goal.description
+    %a.waves-effect.waves-light.btn{:href => "modal"} Do It Again
+    - if goal.ratings.last
+      %p Current score: #{goal.current_score} / 5
+
