@@ -7,13 +7,12 @@
       %ul
         - @user.errors.full_messages.each do |message|
           %li= message
-  - if current_user
-    .input-field
-      = f.label :username
-      = f.text_field :username
-    .input-field
-      = f.label :avatar_url, "Enter a url to update your profile picture."
-      = f.text_field :avatar_url
+  .input-field
+    = f.label :username
+    = f.text_field :username
+  .input-field
+    = f.label :avatar_url, "Enter a url to update your profile picture."
+    = f.text_field :avatar_url
   .input-field
     = f.label :email
     = f.text_field :email
