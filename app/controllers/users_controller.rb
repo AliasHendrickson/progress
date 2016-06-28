@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def progress
     @user = current_user
-    @avatar_url = current_user.avatar_url || "http://www.bugx-exterminators.com/images/gopher.jpg"
+    @avatar_url = current_user.avatar_url
     @daily_goals = @user.goals.where(duration: "daily")
     @weekly_goals = @user.goals.where(duration: "weekly")
     @phase_goals = @user.goals.where(duration: "phase")
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.experience = 0
-    @user.avatar_url ||= 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
+    @user.avatar_url || 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
 
     respond_to do |format|
       if @user.save
