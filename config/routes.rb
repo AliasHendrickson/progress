@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   post 'completed/:id' => 'goals#completed', :as => :completed
 
   resources :user_sessions
-  resources :users
+  resources :users do
+    resources :groups, only: [:show, :new, :create, :update, :edit]
+  end
   resources :goals do
     resources :ratings, only: [:new, :create, :update, :edit]
   end

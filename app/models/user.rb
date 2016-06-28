@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
 
+  belongs_to :group
   has_many :goals
   has_many :ratings, through: :goals, source: :rater
 
