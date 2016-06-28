@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160626191724) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "experience"
+    t.integer  "experience"
     t.string   "avatar_url"
   end
 
