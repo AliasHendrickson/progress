@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
     LEVELS.index { |level| experience < level }
   end
 
-  def level_progress
+  def progress_bar_width
     (((experience - LEVELS[current_level - 1]) / LEVELS[current_level]) * 100).round
   end
 

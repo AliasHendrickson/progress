@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(session[:user_id])
+    @user.experience = 1
     @experience = @user.experience
   end
 
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
 
   def progress
     @user = current_user
-    @goals = @user.goals
+    @avatar_url = current_user.avatar_url || "http://www.bugx-exterminators.com/images/gopher.jpg"
     @daily_goals = @user.goals.where(duration: "daily")
     @weekly_goals = @user.goals.where(duration: "weekly")
     @phase_goals = @user.goals.where(duration: "phase")
@@ -38,12 +39,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.experience = 0
-    @user.avatar_url || 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
+    @user.avatar_url ||= 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
 
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :progress, status: :created, location: @user }
+        format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

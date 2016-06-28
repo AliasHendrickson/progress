@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(session[:user_id])
+    @user.experience = 1
     @experience = @user.experience
   end
 
@@ -21,11 +22,22 @@ class UsersController < ApplicationController
   end
 
   def progress
+<<<<<<< HEAD
     @user = current_user
     @goals = @user.goals
     @daily_goals = @user.goals.where(duration: "daily")
     @weekly_goals = @user.goals.where(duration: "weekly")
     @phase_goals = @user.goals.where(duration: "phase")
+=======
+    @counter = 0
+    @user = User.find(session[:user_id])
+    @user.experience = 1
+    @experience = @user.experience
+    @avatar_url = "http://www.bugx-exterminators.com/images/gopher.jpg"
+    @daily_goals = @user.goals.where(duration: "daily").order('created_at DESC').take(3)
+    @weekly_goal = @user.goals.where(duration: "weekly").last
+    @phase_goal = @user.goals.where(duration: "phase").last
+>>>>>>> master
   end
 
   # GET /users/1/edit
