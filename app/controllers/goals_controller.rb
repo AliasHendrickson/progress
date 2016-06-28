@@ -1,6 +1,9 @@
 class GoalsController < ApplicationController
   def index
-    @goals = current_user.goals.where(completed: true)
+    @user = current_user
+    @daily_goals = @user.goals.where(duration: "daily", completed: true).order('created_at DESC')
+    @weekly_goals = @user.goals.where(duration: "weekly", completed: true).order('created_at DESC')
+    @phase_goals = @user.goals.where(duration: "phase", completed: true).order('created_at DESC')
   end
 
   def show
@@ -46,8 +49,13 @@ class GoalsController < ApplicationController
 
   def completed
     @goal = find_goal
-    @goal.update_attributes(completed: true)
-    redirect_to '/'
+    if @goal.completed
+      @goal.update_attributes(completed: false)
+      redirect_to root_path
+    else
+      @goal.update_attributes(completed: true)
+      redirect_to root_path
+    end
   end
 
 
