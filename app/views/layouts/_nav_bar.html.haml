@@ -1,17 +1,32 @@
-%nav
-  %div{class: "nav-wrapper"}
-    = link_to "Progress", progress_path, class: "brand-logo left"
-    / %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
-    /   %i.material-icons menu
-    %ul.right
-      %li
-        = link_to "New Goal", new_goal_path
-      %li
-        = link_to "Past Goals", goals_path
-      %li
-        = link_to "Profile", user_path(:id => current_user.id)
-    / %ul{class: "side-nav", id: "nav-mobile"}
-    /   %li
-    /     = link_to "New Goal", new_goal_path
-    /     = link_to "Past Goals", goals_path
-    /     = link_to "Profile", user_path(:id => current_user.id)
+/ %nav
+/   %div{class: "nav-wrapper"}
+/     = link_to "Progress", progress_path, class: "brand-logo left"
+/     / %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+/     /   %i.material-icons menu
+/     %ul.right
+/       %li
+/         = link_to "New Goal", new_goal_path
+/       %li
+/         = link_to "Past Goals", goals_path
+/       %li
+/         = link_to "Profile", user_path(:id => current_user.id)
+
+.row
+  .col.s12
+    %ul.tabs
+      %li.tab.col.s3
+        %a{href: "#progress"} Progress
+      %li.tab.col.s3
+        %a{href: "#new_goal"} New Goal
+      %li.tab.col.s3
+        %a{href: "#past_goals"} Past Goals
+      %li.tab.col.s3
+        %a{href: "#profile"} Profile
+    #progress.col.s12
+      = render progress_path
+    #new_goal.col.s12
+      = render new_goal_path
+    #past_goals.col.s12
+      = render goals_path
+    #profile.col.s12
+      = render user_path(id: current_user.id)
