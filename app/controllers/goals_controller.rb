@@ -21,7 +21,7 @@ class GoalsController < ApplicationController
     @goal = @user.goals.new(goal_params)
 
     if @goal.save
-      redirect_to @goal
+      redirect_to '/'
     else
       #This might be different with react
       render "new"
@@ -48,7 +48,7 @@ class GoalsController < ApplicationController
   def completed
     @goal = find_goal
     @goal.update_attributes(completed: true)
-    redirect_to @goal
+    redirect_to '/'
   end
 
 
