@@ -10,7 +10,7 @@ class RatingsController < ApplicationController
     @rating.rater_id = current_user.id
     if @rating.save
       owner.update_attributes(experience: owner.update_experience(@goal))
-      redirect_to progress_path
+      redirect_to "/"
     else
       #This might be different with react
       render "new"
