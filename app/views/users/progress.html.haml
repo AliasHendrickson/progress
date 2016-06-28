@@ -31,8 +31,6 @@
 .collection.with-header
   %h5.collection-header Phase Goals:
   -if @phase_goal
-    / - phase_goal = @phase_goal
-    / = phase_goal
     .collection-item
       %a.myLink{:href => "#openModal"}= @phase_goal.description
       #openModal.modal
