@@ -7,10 +7,11 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
 
+  belongs_to :group
   has_many :goals
   has_many :ratings, through: :goals, source: :rater
 
-  LEVELS = [0, 25, 60, 120, 250, 420, 600, 850]
+  LEVELS = [1, 25, 60, 120, 250, 420, 600, 850]
 
   def current_level
     LEVELS.index { |level| experience < level }
@@ -18,5 +19,12 @@ class User < ActiveRecord::Base
 
   def level_progress
     (((experience - LEVELS[current_level - 1]) / LEVELS[current_level]) * 100).round
+  end
+
+  def update_experience(goal)
+    new_experience = self.experience
+    new_experience -= goal.ratings[-2].score if goal.ratings.length > 1
+    new_experience += goal.ratings[-1].score
+    return new_experience
   end
 end

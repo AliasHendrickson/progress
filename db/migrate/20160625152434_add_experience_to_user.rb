@@ -1,5 +1,5 @@
 class AddExperienceToUser < ActiveRecord::Migration
   def change
-    add_column :users, :experience, :float
+    add_column :users, :experience, :integer
   end
 end
