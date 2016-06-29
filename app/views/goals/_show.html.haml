@@ -1,3 +1,4 @@
+
 .goal
   %h1{class: "goal_title goalShow"}= "#{goal.description}"
 
@@ -15,4 +16,4 @@
 -else
   =button_to("Completed Goal! *High Fives*", completed_path(goal), method: "post", class: "btn completed completed_btn")
 
-=render "rating/ratingForm", :goal => goal
+=render "ratings/form", :goal => goal

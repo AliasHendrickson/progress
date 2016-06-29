@@ -5,13 +5,18 @@
   .profile-username
     %strong Username:
     = @user.username
-  .profile-eramail
+  .profile-email
     %strong Email:
     = @user.email
-= link_to 'Edit', edit_user_path(@user)
-|
-= link_to 'Back', users_path
-|
-= link_to "Logout", logout_path, method: :post
-%p
-  = link_to "Delete Account", user_path(id: current_user.id), method: :delete
+.profile-links
+  %a.edit-profile{:href => "#userEditModal"} Edit
+  .modal#userEditModal
+    .modal-content
+      %span#closeEditModal X
+      =render "users/form", user: current_user
+  |
+  = link_to 'Back', users_path
+  |
+  = link_to "Logout", logout_path, method: :post
+  %p
+    = link_to "Delete Account", user_path(id: current_user.id), method: :delete
