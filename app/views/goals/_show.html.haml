@@ -5,11 +5,11 @@
   %p{class: 'duration goalShow'}= "Your goal is a #{goal.duration} long goal"
 
 %p{class: 'rating goalShow'}= "Here is your past feedback..."
-
-- goal.ratings.each do |rating|
-  .rating-partial
-    %p.confidence_score Confidence score:  #{rating.score}
-    %p.rating_comment Comment:  "#{rating.comment}"
+.rating-partials-container
+  - goal.ratings.each do |rating|
+    .rating-partial
+      %p.confidence_score Score:  #{rating.score}
+      %p.rating_comment Comment:  "#{rating.comment}"
 -if goal.completed
   =button_to("Do It Again!", completed_path(goal), method: "post", class: "btn completed completed_btn")
 -else

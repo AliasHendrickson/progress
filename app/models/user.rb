@@ -14,17 +14,18 @@ class User < ActiveRecord::Base
   LEVELS = [1, 25, 60, 120, 250, 420, 600, 850]
 
   def current_level
-    LEVELS.index { |level| experience < level }
+    new_level = LEVELS.index { |level| experience < level }
+    return new_level < 1 ? 1 : new_level
   end
 
   def progress_bar_width
-    (((experience - LEVELS[current_level - 1]) / LEVELS[current_level]) * 100).round
-  end
-
-  def update_experience(goal)
-    new_experience = self.experience
-    new_experience -= goal.ratings[-2].score if goal.ratings.length > 1
-    new_experience += goal.ratings[-1].score
-    return new_experience
+    above_last_level = self.experience - LEVELS[current_level - 1]
+    p above_last_level
+    proportion = above_last_level.to_f / LEVELS[current_level]
+    p proportion
+    width = proportion * 100
+    p width
+    rounded_width = width.round
+    return rounded_width
   end
 end
