@@ -54,7 +54,10 @@ function handleResponse($form, response) {
   }
 }
 
-function handleRatingForm(form, response)
+function handleRatingForm(form, response) {
+  // update goal show partial
+  // update progress bar
+}
 
 function handleUserResponse(form, response) {
   // update profile view
