@@ -16,7 +16,7 @@ $(document).ready(function() {
     .success(function(response) {
       console.log('Success!');
       $form.closest('.modal')[0].style.display = "none";
-      $('#profile-avatar')each(function(image) {
+      $('#profile-avatar').each(function(image) {
         image.attr('src', response.avatar_url);
       });
       $('#profile-email').text(response.email);
