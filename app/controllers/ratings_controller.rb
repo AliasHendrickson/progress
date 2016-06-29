@@ -5,14 +5,17 @@ class RatingsController < ApplicationController
 
   def create
     @goal = Goal.find(params[:goal_id])
-    owner = @goal.user
+    user = @goal.user
     @rating = @goal.ratings.new(rating_params)
     @rating.rater_id = current_user.id
 
     respond_to do |format|
       if @rating.save
+        p user.experience
+        user.update_attributes(experience: user.experience + @rating.score)
+        p user.experience
         format.html { redirect_to '/', notice: 'Rating was successfully created.' }
-        format.json { render json: @rating }
+        format.json { render json: [@rating, user.current_level, user.progress_bar_width] }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

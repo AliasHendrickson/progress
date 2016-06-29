@@ -4,7 +4,8 @@
   .progress-stats-container
     %span
       %strong= @user.username
-    %span Level: #{@user.current_level}
+    %span Level:
+    %span.current-level= @user.current_level
     .progress-bar-container
       .progress-bar{style: "width: #{current_user.progress_bar_width}%"}
 
@@ -13,7 +14,8 @@
   - @daily_goals.each do |goal|
     .collection-item
       %p.small-goal-view
-        / %p.goal-score="Score: " + goal.current_score.to_s
+        %span="Score: "
+        %span.current-score=goal.current_score
         %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
