@@ -13,7 +13,7 @@
   - @daily_goals.each do |goal|
     .collection-item
       %p.small-goal-view
-        %p.goal-score="Score: " + goal.current_score.to_s
+        / %p.goal-score="Score: " + goal.current_score.to_s
         %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
