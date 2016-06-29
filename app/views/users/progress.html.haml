@@ -7,12 +7,8 @@
         %a{href: "#new_goal"} New Goal
       %li.tab.col.s3
         %a{href: "#past_goals"} P.R.
-      - if current_user.group
-        %li.tab.col.s3
-          %a{href: "#users_group"} My Group
-      - else
-        %li.tab.col.s3
-          %a{href: "#new_group"} Build-A-Squad
+      %li.tab.col.s3
+        %a{href: "#users_group"} My Group
       %li.tab.col.s3
         %a{href: "#profile"} Profile
     .container
@@ -24,7 +20,5 @@
         = render '/goals/index'
       #profile.col.s12
         = render '/users/show'
-      #new_group.col.s12
-        = render '/groups/new'
       #users_group.col.s12
         = render '/groups/show'
