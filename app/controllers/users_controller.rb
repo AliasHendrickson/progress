@@ -23,9 +23,10 @@ class UsersController < ApplicationController
   def progress
     @user = current_user
     @goals = @user.goals
-    @daily_goals = @user.goals.where(duration: "daily")
-    @weekly_goals = @user.goals.where(duration: "weekly")
-    @phase_goals = @user.goals.where(duration: "phase")
+    # @daily_goals = @user.goals.where(duration: "daily")
+    # @weekly_goals = @user.goals.where(duration: "weekly")
+    # p @weekly_goals.last
+    # @phase_goals = @user.goals.where(duration: "phase")
   end
 
   # GET /users/1/edit

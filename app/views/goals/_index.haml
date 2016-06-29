@@ -3,32 +3,41 @@
 
 .collection.with-header
   %h5.collection-header Daily Goals:
-  - @daily_goals.each do |goal|
+  - goals.where(duration: "daily").order('created_at DESC').each do |goal|
     .collection-item
-      %a.myLink{:href => "#openModal"}= goal.description
-      #openModal.modal
+      %p.small-goal-view
+        %span="Score: "
+        %span.current-score=goal.current_score
+        %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
+      #goal-show-modal-daily.modal
         .modal-content
-          %span{class: "close"}="x"
-          =render "goals/show", :goal => goal
+          %span.close-modal-btn X
+          =render "goals/show", goal: goal
 
-.collection.with-header
+.collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
-  - @weekly_goals.each do |goal|
+  - goals.where(duration: "weekly").order('created_at DESC').each do |goal|
     .collection-item
-      %a.myLink{:href => "#openModal"}= goal.description
-      #openModal.modal
+      %p.small-goal-view
+        %span="Score: "
+        %span.current-score=goal.current_score
+        %a.open-modal-link{:href => "#goal-show-modal-weekly"}= goal.description
+      #goal-show-modal-weekly.modal
         .modal-content
-          %span{class: "close"}="x"
-          =render "goals/show", :goal => goal
+          %span.close-modal-btn X
+          =render "goals/show", goal: goal
 
-.collection.with-header
+.collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
-  - @phase_goals.each do |goal|
+  - goals.where(duration: "phase").order('created_at DESC').each do |goal|
     .collection-item
-      %a.myLink{:href => "#openModal"}= goal.description
-      #openModal.modal
+      %p.small-goal-view
+        %span="Score: "
+        %span.current-score=goal.current_score
+        %a.open-modal-link{:href => "#goal-show-modal-phase"}= goal.description
+      #goal-show-modal-phase.modal
         .modal-content
-          %span{class: "close"}="x"
-          =render "goals/show"
+          %span.close-modal-btn X
+          =render "goals/show", goal: goal
 
 

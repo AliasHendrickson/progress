@@ -11,7 +11,7 @@
 
 .collection.with-header#daily-goals
   %h5.collection-header Daily Goals:
-  - @daily_goals.each do |goal|
+  - goals.where(duration: "daily").order('created_at DESC').take(3).each do |goal|
     .collection-item
       %p.small-goal-view
         %span="Score: "
@@ -24,20 +24,20 @@
 
 .collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
-  -if @weekly_goal
+  -if goals.where(duration: "weekly").last
     .collection-item
-      %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goal.description
+      %a.open-modal-link{:href => "#goal-show-modal-weekly"}= goals.where(duration: "weekly").last.description
       #goal-show-modal-weekly.modal
         .modal-content
           %span.close-modal-btn X
-          =render "goals/show", :goal => @weekly_goal
+          =render "goals/show", :goal => goals.where(duration: "weekly").last
 
 .collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
-  -if @phase_goal
+  -if goals.where(duration: "phase").last
     .collection-item
-      %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goal.description
+      %a.open-modal-link{:href => "#goal-show-modal-phase"}= goals.where(duration: "phase").last.description
       #goal-show-modal-phase.modal
         .modal-content
           %span.close-modal-btn X
-          =render "goals/show", :goal => @phase_goal
+          =render "goals/show", :goal => goals.where(duration: "phase").last
