@@ -11,10 +11,10 @@
         %a{href: "#profile"} Profile
     .container
       #progress.col.s12
-        = render '/users/progress'
+        = render '/users/progress', :goals => @goals
       #new_goal.col.s12
         = render '/goals/new'
       #past_goals.col.s12
-        = render '/goals/index'
+        = render '/goals/index', :goals => @goals
       #profile.col.s12
         = render '/users/show'
