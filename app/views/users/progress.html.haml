@@ -6,7 +6,9 @@
       %li.tab.col.s3
         %a{href: "#new_goal"} New Goal
       %li.tab.col.s3
-        %a{href: "#past_goals"} Past Goals
+        %a{href: "#past_goals"} P.R.
+      %li.tab.col.s3
+        %a{href: "#users_group"} My Group
       %li.tab.col.s3
         %a{href: "#profile"} Profile
     .container
@@ -18,3 +20,5 @@
         = render '/goals/index'
       #profile.col.s12
         = render '/users/show'
+      #users_group.col.s12
+        = render '/groups/show'

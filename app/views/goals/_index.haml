@@ -3,7 +3,7 @@
 
 .collection.with-header
   %h5.collection-header Daily Goals:
-  - @daily_goals.each do |goal|
+  - @complete_daily_goals.each do |goal|
     .collection-item
       %a.myLink{:href => "#openModal"}= goal.description
       #openModal.modal
@@ -13,7 +13,7 @@
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
-  - @weekly_goals.each do |goal|
+  - @complete_weekly_goals.each do |goal|
     .collection-item
       %a.myLink{:href => "#openModal"}= goal.description
       #openModal.modal
@@ -23,7 +23,7 @@
 
 .collection.with-header
   %h5.collection-header Phase Goals:
-  - @phase_goals.each do |goal|
+  - @complete_phase_goals.each do |goal|
     .collection-item
       %a.myLink{:href => "#openModal"}= goal.description
       #openModal.modal
