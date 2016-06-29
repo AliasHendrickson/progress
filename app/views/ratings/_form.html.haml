@@ -7,8 +7,8 @@
             %li= msg
 
     .goal_select.selector
-      =f.label "Rate how confident you feel about this goal so far."
-      = f.select(:score, [['I really need to work more on this', 1], ['I understand basic concepts, but would struggle to complete this task', 2], ['I can complete the basics, but would struggle with more complex tasks', 3], ["I can work my way through most problems, but still need help at times", 4], ["My knowledge is strong, and could confidently complete most tasks", 5]], {}, {:class => 'browser-default'})
+      =f.label "Rate your progress:"
+      = f.select(:score, [["1. I haven't even started", 1], ["2. I've started, but that's about it", 2], ["3. I can do it with a lot of help", 3], ["4. I am confident in most problems.", 4], ["5. I can confidently complete most tasks", 5]], {}, {:class => 'browser-default'})
 
     .goal_comment.comment
       =f.label "Feel free to leave any comments here."
