@@ -8,12 +8,15 @@ class RatingsController < ApplicationController
     owner = @goal.user
     @rating = @goal.ratings.new(rating_params)
     @rating.rater_id = current_user.id
-    if @rating.save
-      owner.update_attributes(experience: owner.update_experience(@goal))
-      redirect_to "/"
-    else
-      #This might be different with react
-      render "new"
+
+    respond_to do |format|
+      if @rating.save
+        format.html { redirect_to '/', notice: 'Rating was successfully created.' }
+        format.json { render json: @rating }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 

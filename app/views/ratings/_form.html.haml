@@ -1,4 +1,4 @@
-= form_for [goal, (@rating || goal.ratings.new)], class: "form", id: "rating-form" do |f|
+= form_for [goal, (@rating || goal.ratings.new)] do |f|
   -if f.object.errors.any?
     #errors
       %ul
@@ -14,5 +14,3 @@
     =f.text_area :comment
 
   =f.submit "Rate and Comment"
-
-
