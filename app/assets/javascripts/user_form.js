@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-  const $form = $('.edit_user');
-  $form.on('submit', function(event) {
-
+  $("#profile").on('submit', '.edit-user', function(event) {
+    const $form = $('.edit-user');
     let url = $form.attr('action');
     let method = $form.attr('method');
     let data = $form.serialize();
