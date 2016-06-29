@@ -1,5 +1,5 @@
 $(document).ready( function() {
-  var modal
+  var modal;
   // Get the button that opens the modal
   var link = $(".myLink");
 
@@ -8,7 +8,7 @@ $(document).ready( function() {
 
   // When the user clicks on the button, open the modal
   $(".myLink").on("click", function() {
-    modal = $(this).closest(".collection-item").find('#openModal').get(0)
+    modal = $(this).closest(".collection-item").find('#openModal').get(0);
     modal.style.display = "block";
 
     var span = $(modal).find('.close').get(0);
@@ -16,7 +16,7 @@ $(document).ready( function() {
       span.onclick = function() {
         // console.log(modal)
         modal.style.display = "none";
-      }
+      };
   });
 
   // When the user clicks on <span> (x), close the modal

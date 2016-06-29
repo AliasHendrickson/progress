@@ -9,7 +9,7 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}="x"
-          =render "goals/goalShow", :goal => goal
+          =render "goals/show", :goal => goal
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
@@ -19,7 +19,7 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}="x"
-          =render "goals/goalShow", :goal => goal
+          =render "goals/show", :goal => goal
 
 .collection.with-header
   %h5.collection-header Phase Goals:
@@ -29,7 +29,6 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}="x"
-          =render "goals/goalShow", :goal => goal
-
+          =render "goals/show"
 
 
