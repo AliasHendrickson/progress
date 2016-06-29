@@ -1,4 +1,4 @@
-= form_for @goal ||= Goal.new do |f|
+= form_for @goal ||= Goal.new, class: "form", id: "goal-form" do |f|
   -if @goal.errors.any?
     #errors
       %ul
