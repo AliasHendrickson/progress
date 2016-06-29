@@ -26,6 +26,9 @@ class UsersController < ApplicationController
     @daily_goals = @user.goals.where(duration: "daily")
     @weekly_goals = @user.goals.where(duration: "weekly")
     @phase_goals = @user.goals.where(duration: "phase")
+    @complete_daily_goals = @user.goals.where(duration: "daily", completed: true).order('created_at DESC')
+    @complete_weekly_goals = @user.goals.where(duration: "weekly", completed: true).order('created_at DESC')
+    @complete_phase_goals = @user.goals.where(duration: "phase", completed: true).order('created_at DESC')
     @group = current_user.group || Group.new
   end
 

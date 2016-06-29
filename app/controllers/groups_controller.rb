@@ -10,8 +10,8 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-
     if @group.save
+      current_user.update_attributes(group_id: @group.id)
       redirect_to '/'
     else
       render "new"
