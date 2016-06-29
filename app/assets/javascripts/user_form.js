@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
   $("#profile").on('submit', '.edit-user', function(event) {
-    const $form = $('.edit-user');
-    let url = $form.attr('action');
-    let method = $form.attr('method');
-    let data = $form.serialize();
+    const $form = $('.form'),
+          url = $form.attr('action'),
+          method = $form.attr('method'),
+          data = $form.serialize();
 
     $.ajax({
       url: url,
@@ -13,7 +13,8 @@ $(document).ready(function() {
       dataType: "json"
     })
     .success(function(response) {
-      console.log(response);
+      // close open modal
+      handleResponse($form, response);
     })
     .fail(function(error) {
       console.log(error);
@@ -31,3 +32,33 @@ $(document).ready(function() {
   });
 });
 
+function handleResponse($form, response) {
+  // switch to appropriate tab
+  // confirm changes
+  switch($form.attr('id')) {
+    case 'rating-form':
+      handleRatingResponse($form, response);
+      break;
+    case 'user-form':
+      handleUserResponse($form, response);
+      break;
+    case 'goal-form':
+      handleGoalResponse($form, response);
+      break;
+    case 'user-session-form':
+      handleUserSessionResponse($form, response);
+      break;
+    case 'group-from':
+      handleGroupResponse($form, response);
+      break;
+  }
+}
+
+function handleRatingForm(form, response)
+
+function handleUserResponse(form, response) {
+  // update profile view
+  // update progress view
+}
+
+function handle

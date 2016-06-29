@@ -9,10 +9,10 @@
     %strong Email:
     = @user.email
 .profile-links
-  %a.edit-profile{:href => "#userEditModal"} Edit
-  .modal#userEditModal
+  %a.edit-profile{:href => "#user-edit-modal"} Edit
+  .modal#user-edit-modal
     .modal-content
-      %span#closeEditModal X
+      %span.close-modal-btn X
       =render "users/form", user: current_user
   |
   = link_to 'Back', users_path
