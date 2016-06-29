@@ -1,12 +1,12 @@
 %p#notice= notice
 .progress-container
-  %img{class: "col s3", src: "#{@avatar_url}"}
+  %img{src: "#{@user.avatar_url}"}
   .progress-stats-container
     %span
       %strong= @user.username
     %span Level: #{@user.current_level}
     .progress-bar-container
-      .progress-bar{style: "width: #{@user.progress_bar_width}%"}
+      .progress-bar{style: "width: #{current_user.progress_bar_width}%"}
 
 .collection.with-header
   %h5.collection-header Daily Goals:
@@ -16,7 +16,7 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}="x"
-          =render "goals/goalShow", :goal => goal
+          =render "goals/show", :goal => goal
 
 .collection.with-header
   %h5.collection-header Weekly Goals:
@@ -26,7 +26,7 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}="x"
-          =render "goals/goalShow", :goal => @weekly_goal
+          =render "goals/show", :goal => @weekly_goal
 
 .collection.with-header
   %h5.collection-header Phase Goals:
@@ -36,4 +36,4 @@
       #openModal.modal
         .modal-content
           %span{class: "close"}= "x"
-          =render "goals/goalShow", :goal => @phase_goal
+          =render "goals/show", :goal => @phase_goal

@@ -1,18 +1,18 @@
+
 .goal
-  %h1{class: "goal_title goalShow"}= "#{goal.description}"
+  %h3{class: "goal_title goalShow"}= "#{goal.description}"
 
   %p{class: 'duration goalShow'}= "Your goal is a #{goal.duration} long goal"
 
 %p{class: 'rating goalShow'}= "Here is your past feedback..."
 
 - goal.ratings.each do |rating|
-  %li{class: 'confidence_score'}= "Confidence score:  #{rating.score}"
-
-  %li{class: 'rating_comment'}= "Comment:  #{rating.comment}"
-  %br
+  .rating-partial
+    %p.confidence_score Confidence score:  #{rating.score}
+    %p.rating_comment Comment:  "#{rating.comment}"
 -if goal.completed
   =button_to("Do It Again!", completed_path(goal), method: "post", class: "btn completed completed_btn")
 -else
   =button_to("Completed Goal! *High Fives*", completed_path(goal), method: "post", class: "btn completed completed_btn")
 
-=render "rating/ratingForm", :goal => goal
+=render "ratings/form", :goal => goal

@@ -1,0 +1,19 @@
+.form
+  = form_for [goal, (@rating || goal.ratings.new)] do |f|
+    -if f.object.errors.any?
+      #errors
+        %ul
+          - f.object.errors.full_messages.each do |msg|
+            %li= msg
+
+    .goal_select.selector
+      =f.label "Rate your progress:"
+      = f.select(:score, [["1. I haven't even started", 1], ["2. I've started, but that's about it", 2], ["3. I can do it with a lot of help", 3], ["4. I am confident in most problems.", 4], ["5. I can confidently complete most tasks", 5]], {}, {:class => 'browser-default'})
+
+    .goal_comment.comment
+      =f.label "Feel free to leave any comments here."
+      =f.text_area :comment
+
+    =f.submit "Rate and Comment"
+
+
