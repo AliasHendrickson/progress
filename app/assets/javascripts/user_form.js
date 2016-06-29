@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
-  $("#profile").on('submit', '.edit-user', function(event) {
+  $(".container").on('submit', '.edit_user', function(event) {
+    event.preventDefault();
+    console.log("User form");
     const $form = $('.form'),
           url = $form.attr('action'),
           method = $form.attr('method'),
           data = $form.serialize();
+
+    console.log(url);
+    console.log(method);
+    console.log(data);
 
     $.ajax({
       url: url,
@@ -13,52 +19,12 @@ $(document).ready(function() {
       dataType: "json"
     })
     .success(function(response) {
-      // close open modal
-      handleResponse($form, response);
+      console.log('Success!');
+      $form.closest('.modal').style.display = "none";
+      // handleResponse($form, response);
     })
     .fail(function(error) {
       console.log(error);
     })
   });
-
-  $("#profile").on("click", ".edit-profile", function() {
-    const $modal = $('#userEditModal')[0];
-    console.log($modal);
-    $modal.style.display = "block";
-
-    $('#closeEditModal').on("click", function() {
-      $modal.style.display = "none";
-    });
-  });
 });
-
-function handleResponse($form, response) {
-  // switch to appropriate tab
-  // confirm changes
-  switch($form.attr('id')) {
-    case 'rating-form':
-      handleRatingResponse($form, response);
-      break;
-    case 'user-form':
-      handleUserResponse($form, response);
-      break;
-    case 'goal-form':
-      handleGoalResponse($form, response);
-      break;
-    case 'user-session-form':
-      handleUserSessionResponse($form, response);
-      break;
-    case 'group-from':
-      handleGroupResponse($form, response);
-      break;
-  }
-}
-
-function handleRatingForm(form, response)
-
-function handleUserResponse(form, response) {
-  // update profile view
-  // update progress view
-}
-
-function handle

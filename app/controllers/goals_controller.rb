@@ -23,6 +23,7 @@ class GoalsController < ApplicationController
     @goal = @user.goals.new(goal_params)
 
     if @goal.save
+      Rating.create!(score: 0, comment: "", rater: current_user)
       redirect_to '/'
     else
       #This might be different with react

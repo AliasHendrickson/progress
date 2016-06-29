@@ -9,6 +9,6 @@ class Goal < ActiveRecord::Base
   validates :due_date, presence: true
 
   def current_score
-    return self.ratings.last.score
+    self.ratings.last.score
   end
 end

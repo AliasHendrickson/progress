@@ -8,17 +8,19 @@
     .progress-bar-container
       .progress-bar{style: "width: #{current_user.progress_bar_width}%"}
 
-.collection.with-header
+.collection.with-header#daily-goals
   %h5.collection-header Daily Goals:
   - @daily_goals.each do |goal|
     .collection-item
-      %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
+      %p.small-goal-view
+        / %p.goal-score="Score: " + goal.current_score.to_s
+        %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
           %span.close-modal-btn X
           =render "goals/show", goal: goal
 
-.collection.with-header
+.collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
   -if @weekly_goal
     .collection-item
@@ -28,7 +30,7 @@
           %span.close-modal-btn X
           =render "goals/show", :goal => @weekly_goal
 
-.collection.with-header
+.collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
   -if @phase_goal
     .collection-item
