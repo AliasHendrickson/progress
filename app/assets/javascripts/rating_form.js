@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   $("#progress").on('submit', '.new_rating', function(event) {
     event.preventDefault();
-    console.log("Rating form");
     const $form = $(this),
           url = $form.attr('action'),
           method = $form.attr('method'),
@@ -20,11 +19,11 @@ $(document).ready(function() {
       $form.closest('.collection-item').find('.current-score').text(response[0].score);
       // update goal partial
       $form.closest('.collection-item').find('.rating-partials-container')
-        .prepend(`<div class="rating-partial><p class="confidence_score">Score: ${response[0].score} </p><p class="rating_comment">Comment: ${response[0].comment}</p></div>`)
+        .prepend('<div class="rating-partial"><p class="confidence_score">Score: ' + response[0].score +
+          '</p><p class="rating_comment">Comment: ' + response[0].comment + '</p></div>');
       // update progress bar
       $('.current-level').text(response[1]);
-      $('.progress-bar').css("width": `${response[2]}%`);
-
+      $('.progress-bar').css("width:" + response[2] + "%");
     })
       .fail(function(error) {
       console.log(error);

@@ -1,16 +1,11 @@
 $(document).ready(function() {
-
-  $(".container").on('submit', '.edit_user', function(event) {
+  $( '.edit_user').on('submit', function(event) {
     event.preventDefault();
-    console.log("User form");
-    const $form = $('.form'),
+
+    const $form = $(this),
           url = $form.attr('action'),
           method = $form.attr('method'),
           data = $form.serialize();
-
-    console.log(url);
-    console.log(method);
-    console.log(data);
 
     $.ajax({
       url: url,
@@ -20,8 +15,12 @@ $(document).ready(function() {
     })
     .success(function(response) {
       console.log('Success!');
-      $form.closest('.modal').style.display = "none";
-      // handleResponse($form, response);
+      $form.closest('.modal')[0].style.display = "none";
+      $('#profile-avatar')each(function(image) {
+        image.attr('src', response.avatar_url);
+      });
+      $('#profile-email').text(response.email);
+      $('#profile-username').text(response.username);
     })
     .fail(function(error) {
       console.log(error);

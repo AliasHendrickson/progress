@@ -1,9 +1,9 @@
 %p#notice= notice
 .progress-container
-  %img{src: "#{@user.avatar_url}"}
+  %img#profile-avatar{src: "#{@user.avatar_url}"}
   .progress-stats-container
     %span
-      %strong= @user.username
+      %strong#profile-username= @user.username
     %span Level:
     %span.current-level= @user.current_level
     .progress-bar-container

@@ -9,4 +9,13 @@ $(document).ready(function() {
       $modal.style.display = "none";
     });
   });
+
+  $(".edit-profile").on("click", function() {
+    $modal = $('#user-edit-modal')[0];
+    $modal.style.display = "block";
+
+    $('.close-modal-btn').on("click", function() {
+      $modal.style.display = "none";
+    });
+  });
 });

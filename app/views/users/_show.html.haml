@@ -1,13 +1,13 @@
 %p#notice= notice
 .profile-container
-  .profile-avatar
-    %img{src: @user.avatar_url}
-  .profile-username
-    %strong Username:
-    = @user.username
-  .profile-email
-    %strong Email:
-    = @user.email
+  %img#profile-avatar{src: @user.avatar_url}
+  #profile-text
+    %p
+      %strong Username:
+      %span#profile-username= @user.username
+    %p
+      %strong Email:
+      %span#profile-email= @user.email
 .profile-links
   %a.edit-profile{:href => "#user-edit-modal"} Edit
   .modal#user-edit-modal

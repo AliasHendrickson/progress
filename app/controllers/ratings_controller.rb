@@ -11,9 +11,7 @@ class RatingsController < ApplicationController
 
     respond_to do |format|
       if @rating.save
-        p user.experience
         user.update_attributes(experience: user.experience + @rating.score)
-        p user.experience
         format.html { redirect_to '/', notice: 'Rating was successfully created.' }
         format.json { render json: [@rating, user.current_level, user.progress_bar_width] }
       else
