@@ -14,6 +14,7 @@ $(document).ready(function() {
       dataType: "json"
     })
     .success(function(response) {
+      $form.trigger('reset');
       $form.closest('.modal')[0].style.display = "none";
       // update score
       $form.closest('.collection-item').find('.current-score').text(response[0].score);
