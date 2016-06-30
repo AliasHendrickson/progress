@@ -15,8 +15,6 @@
       %span.close-modal-btn X
       =render "users/form", user: current_user
   |
-  = link_to 'Back', users_path
-  |
   = link_to "Logout", logout_path, method: :post
   %p
     = link_to "Delete Account", user_path(id: current_user.id), method: :delete

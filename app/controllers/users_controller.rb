@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    redirect_to '/'
   end
 
   # GET /users/1
@@ -71,7 +71,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
