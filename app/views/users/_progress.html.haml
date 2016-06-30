@@ -17,7 +17,6 @@
       %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", goal: goal
 
 .collection.with-header#weekly-goals
@@ -28,7 +27,6 @@
       %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
       #goal-show-modal-weekly.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", :goal => goals.where(duration: "weekly").last
 
 .collection.with-header#phase-goals
@@ -39,5 +37,4 @@
       %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description
       #goal-show-modal-phase.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", :goal => goals.where(duration: "phase").last
