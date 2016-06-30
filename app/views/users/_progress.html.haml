@@ -11,7 +11,7 @@
 
 .collection.with-header#daily-goals
   %h5.collection-header Daily Goals:
-  - goals.where(duration: "daily").order('created_at DESC').take(3).each do |goal|
+  - goals.where(duration: "daily").where("due_date >= ?", Date.today).order('created_at DESC').take(3).each do |goal|
     .collection-item
       .current-score=goal.current_score
       %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
@@ -21,7 +21,7 @@
 
 .collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
-  -if @weekly_goals
+  -if @weekly_goals.last
     .collection-item
       .current-score=@weekly_goals.last.current_score
       %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
@@ -31,7 +31,7 @@
 
 .collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
-  -if @phase_goals
+  -if @phase_goals.last
     .collection-item
       .current-score=@phase_goals.last.current_score
       %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description

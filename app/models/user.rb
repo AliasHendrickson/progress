@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
+  before_save :default_values
+
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[crypted_password] }
@@ -28,4 +30,9 @@ class User < ActiveRecord::Base
     rounded_width = width.round
     return rounded_width
   end
+
+  def default_values
+    self.avatar_url = 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg' if self.avatar_url.empty?
+  end
+
 end

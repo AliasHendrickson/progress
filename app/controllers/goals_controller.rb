@@ -23,11 +23,10 @@ class GoalsController < ApplicationController
     @goal = @user.goals.new(goal_params)
 
     if @goal.save
-      Rating.create!(score: 0, comment: "", rater: current_user)
-      redirect_to '/'
+      redirect_to progress_path
     else
       #This might be different with react
-      render "new"
+      redirect_to prog
     end
   end
 
@@ -58,7 +57,6 @@ class GoalsController < ApplicationController
       redirect_to root_path
     end
   end
-
 
   private
 
