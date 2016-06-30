@@ -11,7 +11,7 @@
 
 .collection.with-header#daily-goals
   %h5.collection-header Daily Goals:
-  - goals.where(duration: "daily").order('created_at DESC').take(3).each do |goal|
+  - goals.where(duration: "daily").where("due_date >= ?", Date.today).order('created_at DESC').take(3).each do |goal|
     .collection-item
       .current-score=goal.current_score
       %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
