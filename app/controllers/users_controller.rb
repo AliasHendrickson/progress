@@ -38,7 +38,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.experience = 1
-    @user.avatar_url || 'http://www.twpinc.com/media/catalog/category/TWPCAT_GOPHER.jpg'
 
     respond_to do |format|
       if @user.save
