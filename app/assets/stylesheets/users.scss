@@ -1,3 +1,48 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.flow-text {
+	margin: 0;
+	padding: 10px;
+	color: #F38630;
+}
+
+.splash {
+	border: solid 20px #A7DBDB;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: 100%;
+	font-family: 'El Messiri', sans-serif;
+	color: #69D2E7;
+}
+
+
+h2 {
+	color: #FA6900
+}
+
+.btn {
+	position: relative;
+	margin: 10px;
+	background-color: #FA6900;
+}
+
+.btn:hover {
+	background-color: #F38630;
+}
+
+#login {
+	background-color: #E0E4CC;
+	height: 100%;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+#Register {
+	color: #F38630;
+}
