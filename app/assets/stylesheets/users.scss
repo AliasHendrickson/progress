@@ -15,7 +15,6 @@ h1 {
 }
 
 .container {
-	border: solid 20px #A7DBDB;
 	margin: 0;
 	padding: 0;
 	width: auto;
@@ -62,4 +61,17 @@ body {
 	margin-left: 0px !important;
 }
 
+.collection-header{
+	color: white;
+	border: solid 2px #69D2E7;
+	background-color: #69D2E7 !important;
+}
+
+.collection-item, .collection-header {
+	border-top: solid 2px #69D2E7;
+}
+
+.collection-item {
+	background-color: #E0E4CC !important;
+}
 
