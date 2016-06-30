@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $('.current-score').each(function() {
+    console.log($(this).text());
+    score = $(this).text();
+    $(this).html(addStars(score));
+  });
 
   $("#progress").on('submit', '.new_rating', function(event) {
     event.preventDefault();
@@ -17,7 +22,7 @@ $(document).ready(function() {
       $form.trigger('reset');
       $form.closest('.modal')[0].style.display = "none";
       // update score
-      $form.closest('.collection-item').find('.current-score').text(response[0].score);
+      $form.closest('.collection-item').find('.current-score').html(addStars(response[0].score));
       // update goal partial
       $form.closest('.collection-item').find('.rating-partials-container')
         .prepend('<div class="rating-partial"><p class="confidence_score">Score: ' + response[0].score +
@@ -31,3 +36,12 @@ $(document).ready(function() {
     })
   });
 });
+
+function addStars(score) {
+  stars = "";
+  for(let i = 0; i < score; i++) {
+    stars += "<i class='tiny material-icons'>grade</i>";
+  }
+  console.log(stars);
+  return stars;
+}
