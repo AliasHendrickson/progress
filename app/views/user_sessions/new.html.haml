@@ -1,9 +1,12 @@
-.center-align
-  %p.flow-text Progress encourages you to set short, medium, and long term goals based on interests and feedback, then helps you assess and celebrate improvement.
-  %h5 Login to start making
-  %h2  Progress
-= render 'form'
-.center-align
-  = link_to 'Register', new_user_path
-  = link_to 'Back', user_sessions_path
+.container.splash
+	#login
+		.center-align#splash
+			%p.flow-text Progress encourages you to set short, medium, and long term goals based on interests and feedback, then helps you assess and celebrate improvement.
+			%h5 Login to start making
+			%h2  Progress
+		= render 'form'
+		.center-align
+			#Register
+				= link_to 'Register', new_user_path
+
 
