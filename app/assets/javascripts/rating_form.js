@@ -23,7 +23,7 @@ $(document).ready(function() {
           '</p><p class="rating_comment">Comment: ' + response[0].comment + '</p></div>');
       // update progress bar
       $('.current-level').text(response[1]);
-      $('.progress-bar').css("width:" + response[2] + "%");
+      $('.progress-bar').class("width:" + response[2] + "%");
     })
       .fail(function(error) {
       console.log(error);
