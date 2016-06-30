@@ -4,25 +4,32 @@
     margin: auto;
     top: 5%;
     z-index: 1; /* Sit on top */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto;
+    height: 90%;
 }
 
 /* Modal Content/Box */
 .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fefefe;
     margin: auto;
 }
 
 /* The Close Button */
-.close {
+.close-modal-btn {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 10%;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-modal-btn:hover,
+.close-modal-btn:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

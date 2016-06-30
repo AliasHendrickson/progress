@@ -1,18 +1,18 @@
-
+.close-modal-btn X
 .goal
-  %h3{class: "goal_title goalShow"}= "#{goal.description}"
+  %h3.goal-description{class: "goal_title goalShow"}= "#{goal.description}"
+  %h4.goal-duration{class: 'duration goalShow'}= "This is a #{goal.duration} goal."
 
-  %p{class: 'duration goalShow'}= "Your goal is a #{goal.duration} long goal"
-
-%p{class: 'rating goalShow'}= "Here is your past feedback..."
-.rating-partials-container
-  - goal.ratings.each do |rating|
-    .rating-partial
-      %p.confidence_score Score:  #{rating.score}
-      %p.rating_comment Comment:  "#{rating.comment}"
 -if goal.completed
   =button_to("Do It Again!", completed_path(goal), method: "post", class: "btn completed completed_btn")
 -else
   =button_to("Completed Goal! *High Fives*", completed_path(goal), method: "post", class: "btn completed completed_btn")
 
 =render "ratings/form", :goal => goal
+
+%p{class: 'rating goalShow'}= "Here is your past feedback..."
+.rating-partials-container
+  - goal.ratings.each do |rating|
+    .rating-partial
+      .current-score  #{rating.score}
+      %span.rating_comment "#{rating.comment}"
