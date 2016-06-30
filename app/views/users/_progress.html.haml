@@ -2,7 +2,7 @@
 .progress-container
   %img#profile-avatar{src: "#{@user.avatar_url}"}
   .progress-stats-container
-    %span
+    %span.progress-user-text
       %strong#profile-username= @user.username
     %span Level:
     %span.current-level= @user.current_level
@@ -13,31 +13,28 @@
   %h5.collection-header Daily Goals:
   - goals.where(duration: "daily").order('created_at DESC').take(3).each do |goal|
     .collection-item
-      %p.small-goal-view
-        %span="Score: "
-        %span.current-score=goal.current_score
-        %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
+      .current-score=goal.current_score
+      %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", goal: goal
 
 .collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
-  -if goals.where(duration: "weekly").last
+  -if @weekly_goals
     .collection-item
-      %a.open-modal-link{:href => "#goal-show-modal-weekly"}= goals.where(duration: "weekly").last.description
+      .current-score=@weekly_goals.last.current_score
+      %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
       #goal-show-modal-weekly.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", :goal => goals.where(duration: "weekly").last
 
 .collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
-  -if goals.where(duration: "phase").last
+  -if @phase_goals
     .collection-item
-      %a.open-modal-link{:href => "#goal-show-modal-phase"}= goals.where(duration: "phase").last.description
+      .current-score=@phase_goals.last.current_score
+      %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description
       #goal-show-modal-phase.modal
         .modal-content
-          %span.close-modal-btn X
           =render "goals/show", :goal => goals.where(duration: "phase").last

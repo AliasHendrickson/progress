@@ -5,13 +5,20 @@ img {
 
 .progress-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin: 15px 0;
 }
 
 .progress-stats-container {
   width: 60%;
   display: inline-block;
+}
+
+.progress-user-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .progress-bar-container {
@@ -23,3 +30,22 @@ img {
   background-color: #F38630;
   height: 28px;
 }
+
+.current-score {
+  display: inline-block;
+  width: 35%;
+}
+
+.collection-item {
+  padding: 10px !important;
+  margin: 0, 3%;
+}
+
+.collection h5 {
+  margin: 0;
+}
+
+// .star {
+//   width: 15px;
+//   height: 15px;
+// }
