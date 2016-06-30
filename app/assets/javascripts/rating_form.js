@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 function addStars(score) {
   stars = "";
-  for(let i = 0; i < score; i++) {
+  for(var i = 0; i < score; i++) {
     stars += "<i class='material-icons md-18 star'>grade</i>";
   }
   return stars;
