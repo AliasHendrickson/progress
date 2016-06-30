@@ -14,7 +14,7 @@ h1 {
 	color: #FA6900
 }
 
-.splash {
+.container {
 	border: solid 20px #A7DBDB;
 	margin: 0;
 	padding: 0;
@@ -52,3 +52,14 @@ body {
 #Register {
 	color: #F38630;
 }
+
+.row {
+	height: 100%;
+	overflow: auto;
+	background-color: #E0E4CC;
+	padding: 0;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+
+
