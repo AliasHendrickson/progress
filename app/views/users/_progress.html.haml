@@ -21,7 +21,7 @@
 
 .collection.with-header#weekly-goals
   %h5.collection-header Weekly Goals:
-  -if @weekly_goals
+  -if @weekly_goals.last
     .collection-item
       .current-score=@weekly_goals.last.current_score
       %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
@@ -31,7 +31,7 @@
 
 .collection.with-header#phase-goals
   %h5.collection-header Phase Goals:
-  -if @phase_goals
+  -if @phase_goals.last
     .collection-item
       .current-score=@phase_goals.last.current_score
       %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description
