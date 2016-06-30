@@ -27,7 +27,7 @@
     .collection-item
       .goal-stats-container
         .current-score=@weekly_goals.last.current_score
-        .complete-checkbox=goal.completed
+        .complete-checkbox=@weekly_goals.last.completed
       %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
       #goal-show-modal-weekly.modal
         .modal-content
@@ -39,7 +39,7 @@
     .collection-item
       .goal-stats-container
         .current-score=@phase_goals.last.current_score
-        .complete-checkbox=goal.completed
+        .complete-checkbox=@phase_goals.last.completed
       %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description
       #goal-show-modal-phase.modal
         .modal-content
