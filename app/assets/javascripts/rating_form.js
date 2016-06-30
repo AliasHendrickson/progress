@@ -1,9 +1,4 @@
 $(document).ready(function() {
-  $('.current-score').each(function() {
-    console.log($(this).text());
-    score = $(this).text();
-    $(this).html(addStars(score));
-  });
 
   $("#progress").on('submit', '.new_rating', function(event) {
     event.preventDefault();
@@ -36,11 +31,3 @@ $(document).ready(function() {
     })
   });
 });
-
-function addStars(score) {
-  stars = "";
-  for(var i = 0; i < score; i++) {
-    stars += "<i class='material-icons md-18 star'>grade</i>";
-  }
-  return stars;
-}

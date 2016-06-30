@@ -57,6 +57,12 @@ img {
   width: 35%;
 }
 
+.complete-checkbox {
+  display: inline-block;
+  width: 5%;
+  float: right;
+}
+
 .collection-item {
   padding: 10px !important;
   margin: 0, 3%;
@@ -65,8 +71,3 @@ img {
 .collection h5 {
   margin: 0;
 }
-
-// .star {
-//   width: 15px;
-//   height: 15px;
-// }
