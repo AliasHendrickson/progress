@@ -7,3 +7,4 @@ person.goals.create!(description: "Give pair feedback after every day", duration
 person.goals.create!(description: "Journal about the joys of Nokogiri", duration: "weekly", completed: "false", due_date: "2016-07-31 00:00:00")
 
 person.goals.create!(description: "Make it through DBC without losing my cool", duration: "phase", completed: "false", due_date: "2016-07-31 00:00:00")
+

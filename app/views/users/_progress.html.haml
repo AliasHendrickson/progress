@@ -13,7 +13,9 @@
   %h5.collection-header Daily Goals:
   - goals.where(duration: "daily").where("due_date >= ?", Date.today).order('created_at DESC').take(3).each do |goal|
     .collection-item
-      .current-score=goal.current_score
+      .goal-stats-container
+        .current-score=goal.current_score
+        .complete-checkbox=goal.completed
       %a.open-modal-link{:href => "#goal-show-modal-daily"}= goal.description
       #goal-show-modal-daily.modal
         .modal-content
@@ -23,7 +25,9 @@
   %h5.collection-header Weekly Goals:
   -if @weekly_goals.last
     .collection-item
-      .current-score=@weekly_goals.last.current_score
+      .goal-stats-container
+        .current-score=@weekly_goals.last.current_score
+        .complete-checkbox=@weekly_goals.last.completed
       %a.open-modal-link{:href => "#goal-show-modal-weekly"}= @weekly_goals.last.description
       #goal-show-modal-weekly.modal
         .modal-content
@@ -33,7 +37,9 @@
   %h5.collection-header Phase Goals:
   -if @phase_goals.last
     .collection-item
-      .current-score=@phase_goals.last.current_score
+      .goal-stats-container
+        .current-score=@phase_goals.last.current_score
+        .complete-checkbox=@phase_goals.last.completed
       %a.open-modal-link{:href => "#goal-show-modal-phase"}= @phase_goals.last.description
       #goal-show-modal-phase.modal
         .modal-content

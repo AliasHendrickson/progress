@@ -1,3 +1,7 @@
+body, label {
+  font-size: 1.2em;
+}
+
 .tabs {
   width: auto;
   margin: 0;
@@ -5,11 +9,9 @@
   color: #A7DBDB !important;
 }
 
-
 .tabs .tab a {
   color: #A7DBDB;
 }
-
 
 .active {
   color: #69D2E7 !important;
@@ -28,7 +30,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 0;
+  margin: 15px 15px;
 }
 
 .progress-stats-container {
@@ -52,21 +54,33 @@ img {
   height: 28px;
 }
 
+.goals-list {
+  margin: 0 10px;
+}
+
 .current-score {
   display: inline-block;
   width: 35%;
 }
 
+.complete-checkbox {
+  display: inline-block;
+  width: 5%;
+  float: right;
+}
+
 .collection-item {
-  padding: 10px !important;
-  margin: 0, 3%;
+  padding: 15px !important;
 }
 
 .collection h5 {
   margin: 0;
 }
 
-// .star {
-//   width: 15px;
-//   height: 15px;
-// }
+.profile-container {
+  margin: 15px;
+}
+
+.profile-links {
+  margin: 15px;
+}
