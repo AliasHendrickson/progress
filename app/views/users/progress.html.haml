@@ -1,20 +1,21 @@
-.row
-  .col.s12
-    %ul.tabs
-      %li.tab.col.s3
-        %a{href: "#progress"} Progress
-      %li.tab.col.s3
-        %a{href: "#new_goal"} New Goal
-      %li.tab.col.s3
-        %a{href: "#past_goals"} Past Goals
-      %li.tab.col.s3
-        %a{href: "#profile"} Profile
-    .container
-      #progress.col.s12
-        = render '/users/progress', :goals => @goals
-      #new_goal.col.s12
-        = render '/goals/new'
-      #past_goals.col.s12
-        = render '/goals/index', :goals => @goals
-      #profile.col.s12
-        = render '/users/show'
+.container
+  .row
+    .col.s12
+      %ul.tabs
+        %li.tab.col.s3
+          %a{href: "#progress"} Progress
+        %li.tab.col.s3
+          %a{href: "#new_goal"} New Goal
+        %li.tab.col.s3
+          %a{href: "#past_goals"} Past Goals
+        %li.tab.col.s3
+          %a{href: "#profile"} Profile
+      .container-col
+        #progress.col.s12
+          = render '/users/progress', :goals => @goals
+        #new_goal.col.s12
+          = render '/goals/new'
+        #past_goals.col.s12
+          = render '/goals/index', :goals => @goals
+        #profile.col.s12
+          = render '/users/show'
