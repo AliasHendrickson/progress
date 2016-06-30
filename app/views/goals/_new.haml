@@ -1,5 +1,7 @@
-.goal_form
+.goal_form.center-align
   %h2{class: "goal-form-h"} Set your goal
+
+  =render '/goals/form'
 
   %h3.smart-header S.M.A.R.T Reminder
 
@@ -11,13 +13,12 @@
     %li <span class="first-letter">T</span>imely
 
   %h5.inspiration Some sources of inspiration...
-  %ol
+  %ul
     %li daily challenge learning goals
     %li recent feedback from a mentor or pair
     %li <a href="https://feedback.devbootcamp.com">Feedbackinator</a>
     %li Why are you at DBC? What gets you up in the morning?
 
-    =render '/goals/form'
 
 
 
