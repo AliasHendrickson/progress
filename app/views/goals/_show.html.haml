@@ -6,7 +6,7 @@
 -if goal.completed
   =button_to("Do It Again!", completed_path(goal), method: "post", class: "btn completed completed_btn")
 -else
-  =button_to("Completed Goal! *High Fives*", completed_path(goal), method: "post", class: "btn completed completed_btn")
+  =button_to("Complete Goal!", completed_path(goal), method: "post", class: "btn completed completed_btn")
 
 =render "ratings/form", :goal => goal
 

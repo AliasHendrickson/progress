@@ -8,6 +8,10 @@
     height: 90%;
 }
 
+.modal {
+    background-color: #E0E4CC !important;    
+}
+
 /* Modal Content/Box */
 .modal-content {
     display: flex;
@@ -22,7 +26,7 @@
     display: block;
     position: absolute;
     top: 5%;
-    right: 10%;
+    right: 5px;
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
