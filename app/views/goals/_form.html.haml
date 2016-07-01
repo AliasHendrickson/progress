@@ -14,6 +14,6 @@
 
   %div{class: "input-field col s12"}
   = f.label "Enter in a due date:"
-  = f.date_field :due_date, class: "datepicker"
+  = f.date_field :due_date, value: Date.today, class: "datepicker"
 
   = f.submit "Dream Forward", class: "btn waves-effect waves-light"
