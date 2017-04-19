@@ -36,6 +36,9 @@ gem 'simplecov', :require => false, :group => :test
 #the amazing erb converter of haml
 gem "haml-rails", "~> 0.9"
 
+#send grid for email
+gem 'sendgrid'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
